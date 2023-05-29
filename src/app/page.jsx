@@ -7,6 +7,10 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
+const RoadmapWrapper = ({ children }) => {
+	return <div className="w-full flex justify-between">{children}</div>;
+};
+
 export default function Home() {
 	useEffect(() => {
 		Aos.init({ duration: 1000 });
@@ -90,100 +94,65 @@ export default function Home() {
 					</Paragraph>
 				</div>
 			</SectionContainer>
-			<SectionContainer id="roadmap" className="bg-roadmap">
-				<Paragraph>
-					<Title>Phase 0</Title>
-
-					<p>
-						It represents prosperity and completeness. The number 88 is
-						especially popular in Chinese culture because of the double eights
-						but also because of its visual similarity to the sign for double
-						happiness: 囍 囍
-					</p>
-					<p>
-						Cat We will have Buy & Sell Tax. Who does not love Reflections,
-						passive income just by holding our Tokens.
-					</p>
-					<p>Buy Tax - 2% reflection, 2% to buyback wallet</p>
-					<p>Sell Tax – 2% Reflection, 4% to buyback wallet</p>
-				</Paragraph>
-				<Paragraph>
-					<Title>Phase 1</Title>
-					<p>
-						Total Supply is 88 Billions. The number 8 is an extremely lucky
-						number in Chinese numerology.
-					</p>
-					<p>
-						It represents prosperity and completeness. The number 88 is
-						especially popular in Chinese culture because of the double eights
-						but also because of its visual similarity to the sign for double
-						happiness: 囍 囍
-					</p>
-					<p>
-						Cat We will have Buy & Sell Tax. Who does not love Reflections,
-						passive income just by holding our Tokens.
-					</p>
-					<p>Buy Tax - 2% reflection, 2% to buyback wallet</p>
-					<p>Sell Tax – 2% Reflection, 4% to buyback wallet</p>
-				</Paragraph>
-				<Paragraph>
-					<Title>Phase 2</Title>
-					<p>
-						Total Supply is 88 Billions. The number 8 is an extremely lucky
-						number in Chinese numerology.
-					</p>
-					<p>
-						It represents prosperity and completeness. The number 88 is
-						especially popular in Chinese culture because of the double eights
-						but also because of its visual similarity to the sign for double
-						happiness: 囍 囍
-					</p>
-					<p>
-						Cat We will have Buy & Sell Tax. Who does not love Reflections,
-						passive income just by holding our Tokens.
-					</p>
-					<p>Buy Tax - 2% reflection, 2% to buyback wallet</p>
-					<p>Sell Tax – 2% Reflection, 4% to buyback wallet</p>
-				</Paragraph>
-				<Paragraph>
-					<Title>Phase 3</Title>
-					<p>
-						Total Supply is 88 Billions. The number 8 is an extremely lucky
-						number in Chinese numerology.
-					</p>
-					<p>
-						It represents prosperity and completeness. The number 88 is
-						especially popular in Chinese culture because of the double eights
-						but also because of its visual similarity to the sign for double
-						happiness: 囍 囍
-					</p>
-					<p>
-						Cat We will have Buy & Sell Tax. Who does not love Reflections,
-						passive income just by holding our Tokens.
-					</p>
-					<p>Buy Tax - 2% reflection, 2% to buyback wallet</p>
-					<p>Sell Tax – 2% Reflection, 4% to buyback wallet</p>
-				</Paragraph>
-				<Paragraph>
-					<Title>Phase 4</Title>
-					<p>
-						Total Supply is 88 Billions. The number 8 is an extremely lucky
-						number in Chinese numerology.
-					</p>
-					<p>
-						It represents prosperity and completeness. The number 88 is
-						especially popular in Chinese culture because of the double eights
-						but also because of its visual similarity to the sign for double
-						happiness: 囍 囍
-					</p>
-					<p>
-						Cat We will have Buy & Sell Tax. Who does not love Reflections,
-						passive income just by holding our Tokens.
-					</p>
-					<p>Buy Tax - 2% reflection, 2% to buyback wallet</p>
-					<p>Sell Tax – 2% Reflection, 4% to buyback wallet</p>
-				</Paragraph>
-			</SectionContainer>
+			<div className="bg-roadmap bg-cover bg-no-repeat py-40 w-full flex flex-col gap-12">
+				<RoadmapWrapper>
+					<div className="h-10 w-10">askdw</div>
+					<Paragraph>
+						<Title>Phase 0</Title>
+						<p>Market Research & Gap Analysis Concept,</p>
+						<p>Product Design & Whitepaper</p>
+						<p>Preparation Website, Social Media handles Launch</p>
+					</Paragraph>
+				</RoadmapWrapper>
+				<RoadmapWrapper>
+					<Paragraph>
+						<Title>Phase 1</Title>
+						<p>
+							Smart Contract Development & Auditing Pre-Launch Marketing, &
+							Influencer Onboarding KYC with Pre-Sale Partner Public Pre-Sale
+							Go-Live on Pancakeswap Dex
+						</p>
+					</Paragraph>
+					<div className="h-10 w-10">askdw</div>
+				</RoadmapWrapper>
+				<RoadmapWrapper>
+					<div className="h-10 w-10">askdw</div>
+					<Paragraph>
+						<Title>Phase 2</Title>
+						<p>
+							CoinMarketCap, CoinGecko Listing 5000+ holders More Marketing &
+							Influencer Onboarding Promotion in Chinese/Asian Market Kick off
+							Community Contests & Airdrops Mission Charity – 1st & 2nd Donation
+						</p>
+					</Paragraph>
+				</RoadmapWrapper>
+				<RoadmapWrapper>
+					<Paragraph>
+						<Title>Phase 3</Title>
+						<p>
+							10000+ holders Tier 1 CEX Listings Revamped Website Launch Mission
+							Charity – continues…. Yield Farming Pools Launch (Single Token &
+							LP Pair) Cross Chain Liquidity (ETH, ARB, SOL)
+						</p>
+					</Paragraph>
+					<div className="h-10 w-10">askdw</div>
+				</RoadmapWrapper>
+				<RoadmapWrapper>
+					<div className="h-10 w-10">askdw</div>
+					<Paragraph>
+						<Title>Phase 4</Title>
+						<p>
+							Mission Charity – continues… NFT Store Launch Happy Cat
+							Merchandise Store HCAT AI Tool Launch HCAT Self-Custodial Walle
+						</p>
+					</Paragraph>
+				</RoadmapWrapper>
+				<p className="px-[30%] text-center text-3xl text-black">
+					** We may modify/add new items in Roadmap so as to keep up with the
+					latest trends in Blockchain and Crypto Industry. We would always like
+					to bring the best for our community.
+				</p>
+			</div>
 			<SectionContainer id="xoxo" className="py-64 bg-xoxo">
 				<Title anim="fade">XOXO</Title>
 			</SectionContainer>

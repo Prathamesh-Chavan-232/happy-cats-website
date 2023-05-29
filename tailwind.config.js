@@ -23,7 +23,7 @@ module.exports = {
 			},
 			backgroundColor: {
 				dark: "#221F20",
-				primary: "rgba(255,255,255,0.5)",
+				primary: "rgba(255,255,255,0.3)",
 			},
 		},
 	},
