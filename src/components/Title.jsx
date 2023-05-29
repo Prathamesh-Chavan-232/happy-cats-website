@@ -1,8 +1,10 @@
-const Title = ({ children, className, ...props }) => {
+const Title = ({ anim, children, className, ...props }) => {
 	return (
 		<p
+      data-aos={anim}
 			className={
-				"text-7xl font-extrabold text-primary relative z-20 " +
+
+				"text-5xl md:text-7xl font-extrabold text-primary relative z-20 " +
 				(className || "")
 			}
 		>
