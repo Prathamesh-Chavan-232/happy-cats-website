@@ -1,6 +1,7 @@
 "use client";
 import { Paragraph } from "@/components/Paragraph";
 import { SectionContainer } from "@/components/SectionContainer";
+import { Roadmap } from "@/components/Roadmap";
 import Title from "@/components/Title";
 import Link from "next/link";
 import Aos from "aos";
@@ -21,11 +22,19 @@ export default function Home() {
 				<div className="px-40 py-8 flex items-center justify-between bg-dark text-white">
 					<span>SOCIALS</span>
 					<span>LOGO</span>
-					<span>INTERACTION BUTTONS</span>
+					<div className="flex gap-4">
+						<Link href="https://instagram.com">Insta</Link>
+						<Link href="https://twitter.com">Twitter</Link>
+						<Link href="https://telegram.org">Telegram</Link>
+						<Link href="https://discord.com">Discord</Link>
+						<Link href="https://youtube.com">Youtube</Link>
+						<Link href="https://medium.com">Medium</Link>
+					</div>
 				</div>
+
 				<div className="px-40 py-4 flex items-center justify-center bg-white text-black">
 					<nav className="font-extrabold space-x-20">
-						<Link href="#">HOME</Link>
+						<Link href="">HOME</Link>
 						<Link href="#about">ABOUT</Link>
 						<Link href="">NFTS</Link>
 						<Link href="#tokenomics">TOKENOMICS</Link>
@@ -37,9 +46,21 @@ export default function Home() {
 			</header>
 
 			<SectionContainer className="bg-hero h-screen">
-				<Title anim="zoom-in" className="text-white">
-					JOIN HAPPY CATS
-				</Title>
+				<div className="flex flex-col gap-20">
+					<Title anim="zoom-in" className="text-white">
+						JOIN HAPPY CATS
+					</Title>
+					<div className="text-3xl px-[10%]">
+						Inspired by the “Happy Cat” viral meme, our own{" "}
+						{"<come up with a fancy name>"} (the Cat) has arrived. The days of
+						Dogs, Peeps are over. It’s time for our “Happy Happy Cat” to take
+						over the Web3 world.
+					</div>
+					<div className="px-[20%] flex justify-around">
+						<button>Buy now</button>
+						<button>Claim Airdrop</button>
+					</div>
+				</div>
 			</SectionContainer>
 
 			<SectionContainer id="about" className="py-40 bg-about">
@@ -94,65 +115,9 @@ export default function Home() {
 					</Paragraph>
 				</div>
 			</SectionContainer>
-			<div className="bg-roadmap bg-cover bg-no-repeat py-40 w-full flex flex-col gap-12">
-				<RoadmapWrapper>
-					<div className="h-10 w-10">askdw</div>
-					<Paragraph>
-						<Title>Phase 0</Title>
-						<p>Market Research & Gap Analysis Concept,</p>
-						<p>Product Design & Whitepaper</p>
-						<p>Preparation Website, Social Media handles Launch</p>
-					</Paragraph>
-				</RoadmapWrapper>
-				<RoadmapWrapper>
-					<Paragraph>
-						<Title>Phase 1</Title>
-						<p>
-							Smart Contract Development & Auditing Pre-Launch Marketing, &
-							Influencer Onboarding KYC with Pre-Sale Partner Public Pre-Sale
-							Go-Live on Pancakeswap Dex
-						</p>
-					</Paragraph>
-					<div className="h-10 w-10">askdw</div>
-				</RoadmapWrapper>
-				<RoadmapWrapper>
-					<div className="h-10 w-10">askdw</div>
-					<Paragraph>
-						<Title>Phase 2</Title>
-						<p>
-							CoinMarketCap, CoinGecko Listing 5000+ holders More Marketing &
-							Influencer Onboarding Promotion in Chinese/Asian Market Kick off
-							Community Contests & Airdrops Mission Charity – 1st & 2nd Donation
-						</p>
-					</Paragraph>
-				</RoadmapWrapper>
-				<RoadmapWrapper>
-					<Paragraph>
-						<Title>Phase 3</Title>
-						<p>
-							10000+ holders Tier 1 CEX Listings Revamped Website Launch Mission
-							Charity – continues…. Yield Farming Pools Launch (Single Token &
-							LP Pair) Cross Chain Liquidity (ETH, ARB, SOL)
-						</p>
-					</Paragraph>
-					<div className="h-10 w-10">askdw</div>
-				</RoadmapWrapper>
-				<RoadmapWrapper>
-					<div className="h-10 w-10">askdw</div>
-					<Paragraph>
-						<Title>Phase 4</Title>
-						<p>
-							Mission Charity – continues… NFT Store Launch Happy Cat
-							Merchandise Store HCAT AI Tool Launch HCAT Self-Custodial Walle
-						</p>
-					</Paragraph>
-				</RoadmapWrapper>
-				<p className="px-[30%] text-center text-3xl text-black">
-					** We may modify/add new items in Roadmap so as to keep up with the
-					latest trends in Blockchain and Crypto Industry. We would always like
-					to bring the best for our community.
-				</p>
-			</div>
+
+			<Roadmap />
+
 			<SectionContainer id="xoxo" className="py-64 bg-xoxo">
 				<Title anim="fade">XOXO</Title>
 			</SectionContainer>
