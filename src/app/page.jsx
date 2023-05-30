@@ -2,6 +2,7 @@
 import { Paragraph } from "@/components/Paragraph";
 import { SectionContainer } from "@/components/SectionContainer";
 import { Roadmap } from "@/components/Roadmap";
+import Footer from "@/components/Footer";
 import Title from "@/components/Title";
 import Link from "next/link";
 import Aos from "aos";
@@ -117,6 +118,7 @@ export default function Home() {
 			</SectionContainer>
 
 			<Roadmap />
+			<Footer />
 
 			<SectionContainer id="xoxo" className="py-64 bg-xoxo">
 				<Title anim="fade">XOXO</Title>
