@@ -1,8 +1,3 @@
-import twitterIcon from "@/img/twitter-icon.svg";
-import instagramIcon from "@/img/instagram-icon.svg";
-import facebookIcon from "@/img/facebook-icon.svg";
-import emailIcon from "@/img/email-icon.svg";
-import Image from "next/image";
 import { Paragraph } from "./Paragraph";
 
 // TODO: Replace URLs
@@ -16,30 +11,8 @@ const Footer = () => {
 						href="https://twitter.com"
 						target="_blank"
 					>
-						<Image src={twitterIcon} alt="Twitter Icon" fill />
 					</a>
 				</Paragraph>
-				<a
-					className="relative h-full w-5"
-					href="https://facebook.com"
-					target="_blank"
-				>
-					<Image src={facebookIcon} alt="Facebook Icon" fill />
-				</a>
-				<a
-					className="relative h-full w-5"
-					href="https://instagram.com"
-					target="_blank"
-				>
-					<Image src={instagramIcon} alt="Instagram Icon" fill />
-				</a>
-				<a
-					className="relative h-full w-5"
-					href="https://gmail.com"
-					target="_blank"
-				>
-					<Image src={emailIcon} alt="Email Icon" fill />
-				</a>
 			</div>
 		</section>
 	);

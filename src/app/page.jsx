@@ -15,10 +15,10 @@ const RoadmapWrapper = ({ children }) => {
 
 export default function Home() {
 	useEffect(() => {
-		Aos.init({ duration: 1000 });
+		Aos.init({ duration: 600 });
 	}, []);
 	return (
-		<main className="text-white">
+		<main className="text-primary">
 			<header className="hidden z-50 md:block">
 				<div className="px-40 py-8 flex items-center justify-between bg-dark text-white">
 					<span>SOCIALS</span>
@@ -33,7 +33,7 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div className="px-40 py-4 flex items-center justify-center bg-white text-black">
+				<div className="hidden lg:flex px-40 py-4 items-center justify-center bg-white text-black">
 					<nav className="font-extrabold space-x-20">
 						<Link href="">HOME</Link>
 						<Link href="#about">ABOUT</Link>
@@ -46,20 +46,27 @@ export default function Home() {
 				</div>
 			</header>
 
-			<SectionContainer className="bg-hero h-screen">
+			<SectionContainer className="bg-hero h-screen w-screen">
 				<div className="flex flex-col gap-20">
-					<Title anim="zoom-in" className="text-white">
+					<h1
+						data-aos="zoom-in"
+						className="mt-80 text-white text-6xl md:text-7xl lg:text-9xl font-extrabold "
+					>
 						JOIN HAPPY CATS
-					</Title>
-					<div className="text-3xl px-[10%]">
+					</h1>
+					<div className="font-semibold text-lg lg:text-3xl px-[10%]">
 						Inspired by the “Happy Cat” viral meme, our own{" "}
 						{"<come up with a fancy name>"} (the Cat) has arrived. The days of
 						Dogs, Peeps are over. It’s time for our “Happy Happy Cat” to take
 						over the Web3 world.
 					</div>
 					<div className="px-[20%] flex justify-around">
-						<button>Buy now</button>
-						<button>Claim Airdrop</button>
+						<button className="px-10 py-4 border border-white bg-white text-2xl text-black font-bold rounded-full baseline transition-color duration-200">
+							<a href="/travel-styles/pilgrimage-tour">Buy Now</a>
+						</button>
+						<button className="px-10 py-4 border border-white bg-white text-2xl text-black font-bold rounded-full baseline transition-color duration-200">
+							<a href="/travel-styles/pilgrimage-tour">Claim Airdrop</a>
+						</button>
 					</div>
 				</div>
 			</SectionContainer>
@@ -69,8 +76,10 @@ export default function Home() {
 					data-aos="fade"
 					className="flex flex-col items-center justify-center gap-12"
 				>
-					<Title anim="zoom-in-down">ABOUT US</Title>
-					<Paragraph data-aos="fade-down">
+					<Title anim="zoom-in-down" className="text-about">
+						ABOUT US
+					</Title>
+					<Paragraph data-aos="fade-down" className="text-about">
 						<p className="" data-aos="fade">
 							Happy Cat is not just a meme project. We are bringing the best of
 							AI, GPT and Defi together.
@@ -95,8 +104,10 @@ export default function Home() {
 
 			<SectionContainer id="tokenomics" className="py-40 bg-tokenomics">
 				<div className="flex flex-col items-center justify-center gap-12">
-					<Title anim="zoom-in">TOKENOMICS</Title>
-					<Paragraph>
+					<Title anim="zoom-in" className="text-tokenomics">
+						TOKENOMICS
+					</Title>
+					<Paragraph className="text-tokenomics">
 						<p>
 							Total Supply is 88 Billions. The number 8 is an extremely lucky
 							number in Chinese numerology.
@@ -118,10 +129,11 @@ export default function Home() {
 			</SectionContainer>
 
 			<Roadmap />
-			<Footer />
 
-			<SectionContainer id="xoxo" className="py-64 bg-xoxo">
-				<Title anim="fade">XOXO</Title>
+			<SectionContainer id="xoxo" className="h-screen bg-xoxo">
+				<Title anim="fade" className={"text-white"}>
+					PARTNERS
+				</Title>
 			</SectionContainer>
 		</main>
 	);
