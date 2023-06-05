@@ -19,11 +19,11 @@ export default function Home() {
 	}, []);
 	return (
 		<main className="text-primary">
-			<header className="hidden z-50 md:block">
-				<div className="px-40 py-8 flex items-center justify-between bg-dark text-white">
+			<header className="z-50 md:block">
+				<div className="px-4 lg:px-40 py-8 text-xs flex items-center justify-between bg-dark text-white">
 					<span>SOCIALS</span>
 					<span>LOGO</span>
-					<div className="flex gap-4">
+					<div className="hidden md:flex gap-4">
 						<Link href="https://instagram.com">Insta</Link>
 						<Link href="https://twitter.com">Twitter</Link>
 						<Link href="https://telegram.org">Telegram</Link>
@@ -60,12 +60,12 @@ export default function Home() {
 						Dogs, Peeps are over. It’s time for our “Happy Happy Cat” to take
 						over the Web3 world.
 					</div>
-					<div className="px-[20%] flex justify-around">
-						<button className="px-10 py-4 border border-white bg-white text-2xl text-black font-bold rounded-full baseline transition-color duration-200">
-							<a href="/travel-styles/pilgrimage-tour">Buy Now</a>
+					<div className="flex justify-around">
+						<button className="px-10 py-1 border border-white bg-white text-lg md:text-2xl text-black font-bold rounded-full baseline">
+							<a href="#">Buy Now</a>
 						</button>
-						<button className="px-10 py-4 border border-white bg-white text-2xl text-black font-bold rounded-full baseline transition-color duration-200">
-							<a href="/travel-styles/pilgrimage-tour">Claim Airdrop</a>
+						<button className="px-6 md:px-10 py-4 border border-white bg-white text-lg md:text-2xl text-black font-bold rounded-full baseline">
+							<a href="#">Claim Airdrop</a>
 						</button>
 					</div>
 				</div>
