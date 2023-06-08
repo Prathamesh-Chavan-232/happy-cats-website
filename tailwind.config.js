@@ -22,7 +22,7 @@ module.exports = {
 				primary: "#000",
 				secondary: "#FFFFFF",
         about: '#291E56',
-        tokenomics: '#291E56',
+        tokenomics: '#183439',
 			},
 			backgroundColor: {
 				dark: "#221F20",

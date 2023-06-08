@@ -98,7 +98,7 @@ export default function Home() {
 				<div className="flex flex-col justify-center gap-20">
 					<h1
 						data-aos="zoom-in"
-						className="text-black text-6xl md:text-7xl lg:text-9xl font-extrabold "
+						className="mt-16 text-white text-6xl md:text-7xl lg:text-9xl font-extrabold "
 					>
 						JOIN HAPPY CATS
 					</h1>
@@ -183,10 +183,10 @@ export default function Home() {
            
         <Title className="text-white font-extrabold">SOCIALS</Title>
         <div className="font-semibold text-white text-lg lg:text-4xl px-4">Our Telegram and Twitter are the best places to stay updated on the latest HAPPY CATS news and connect with fellow community members</div>
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-20 justify-center">
+        <div className="mx-[20%] xl:mx-60 2xl:mx-96 grid grid-cols-1 xl:grid-cols-2 gap-20 justify-center">
           {
             socials.map((item, i) => {
-              return <button key={i} className="mx-32 px-10 py-4 border border-black bg-white text-2xl text-black font-bold rounded-full baseline shadow-xl">
+              return <button key={i} className="px-10 py-6 border border-black bg-white text-2xl text-black font-bold rounded-full baseline shadow-xl">
                 <a href={item.link}>{item.title}</a>
               </button>
             })
