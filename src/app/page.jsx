@@ -9,10 +9,38 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-const RoadmapWrapper = ({ children }) => {
-	return <div className="w-full flex justify-between">{children}</div>;
-};
-
+const socials = [
+  {
+    title: "Telegram",
+    link: "https://www.telegram.org",
+    img: "",
+  },
+  {
+    title: "Medium",
+    link: "https://www.medium.com",
+    img: "", 
+  },
+  {
+    title: "Twitter",
+    link: "https://www.twitter.com",
+    img: "", 
+  },
+  {
+    title: "Discord",
+    link: "https://www.discord.org",
+    img: "", 
+  },
+  {
+    title: "Youtube",
+    link: "https://www.youtube.com",
+    img: "", 
+  },
+  {
+    title: "Instagram",
+    link: "https://www.instagram.com",
+    img: "", 
+  },
+]
 export default function Home() {
 	useEffect(() => {
 		Aos.init({ duration: 600 });
@@ -47,21 +75,21 @@ export default function Home() {
 			</header>
 
 			<SectionContainer className="bg-hero h-screen w-screen">
-				<div className="flex flex-col gap-20">
+				<div className="flex flex-col justify-center gap-20">
 					<h1
 						data-aos="zoom-in"
-						className="mt-80 text-white text-6xl md:text-7xl lg:text-9xl font-extrabold "
+						className="text-black text-6xl md:text-7xl lg:text-9xl font-extrabold "
 					>
 						JOIN HAPPY CATS
 					</h1>
-					<div className="font-semibold text-lg lg:text-3xl px-[10%]">
+					<div className="font-semibold text-white text-lg lg:text-4xl px-4 md:px-[30%]">
 						Inspired by the “Happy Cat” viral meme, our own{" "}
 						{"<come up with a fancy name>"} (the Cat) has arrived. The days of
 						Dogs, Peeps are over. It’s time for our “Happy Happy Cat” to take
 						over the Web3 world.
 					</div>
 					<div className="flex justify-around">
-						<button className="px-10 py-1 border border-white bg-white text-lg md:text-2xl text-black font-bold rounded-full baseline">
+						<button className="px-6 md:px-10 py-4 border border-white bg-white text-lg md:text-2xl text-black font-bold rounded-full baseline">
 							<a href="#">Buy Now</a>
 						</button>
 						<button className="px-6 md:px-10 py-4 border border-white bg-white text-lg md:text-2xl text-black font-bold rounded-full baseline">
@@ -130,11 +158,28 @@ export default function Home() {
 
 			<Roadmap />
 
-			<SectionContainer id="xoxo" className="h-screen bg-xoxo">
-				<Title anim="fade" className={"text-white"}>
-					PARTNERS
-				</Title>
-			</SectionContainer>
-		</main>
-	);
+      <SectionContainer id="footer" className="py-40 bg-splash">
+        <div className="px-4 space-y-20">
+           
+        <Title className="text-white font-extrabold">SOCIALS</Title>
+        <div className="font-semibold text-white text-lg lg:text-4xl px-4">Our Telegram and Twitter are the best places to stay updated on the latest HAPPY CATS news and connect with fellow community members</div>
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-20 justify-center">
+          {
+            socials.map((item, i) => {
+              return <button key={i} className="mx-32 px-10 py-4 border border-black bg-white text-2xl text-black font-bold rounded-full baseline shadow-xl">
+                <a href={item.link}>{item.title}</a>
+              </button>
+            })
+          }         
+
+          </div>
+        </div>
+      </SectionContainer>
+      <SectionContainer id="xoxo" className="h-screen bg-xoxo">
+        <Title anim="fade" className={"text-center text-white"}>
+          PARTNERS
+        </Title>
+      </SectionContainer>
+    </main>
+  );
 }

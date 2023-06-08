@@ -4,7 +4,7 @@ const Title = ({ anim, children, className, ...props }) => {
       
       data-aos={anim}
 			className={
-				"text-5xl md:text-7xl font-extrabold relative z-20 " +
+				"text-4xl md:text-7xl font-extrabold relative z-20 " +
 				(className || "")
 			}
 		>

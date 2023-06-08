@@ -1,5 +1,7 @@
+import Image from "next/image";
 import { Paragraph } from "./Paragraph";
 import Title from "./Title";
+import bamboo from "@/img/bamboo.png"
 
 export const Roadmap = () => {
 	const roadmap = [
@@ -37,21 +39,23 @@ export const Roadmap = () => {
 	return (
 		<div
 			id="roadmap"
-			className="bg-roadmap bg-cover bg-no-repeat py-40 w-full flex flex-col gap-12"
+			className="relative bg-roadmap bg-cover bg-no-repeat py-40 w-full flex flex-col gap-12"
 		>
-			<div>
+			<div className="flex flex-col gap-20">
+        <Title className="text-center">ROADMAP</Title>
+        <Image src={bamboo} alt="bamboo" className="hidden lg:block absolute top-60 left-[5%] xl:left-[45%]"></Image>
 				{roadmap.map((item, i) => {
 					return (
 						<div key={i} className={"timeline-elem " + item.align}>
 							<Paragraph className="whitespace-pre-line">
-								<div className="">{item.title}</div>
-								<p>{item.content}</p>
+								<div className="text-4xl">{item.title}</div>
+								<p className="text-xl">{item.content}</p>
 							</Paragraph>
 						</div>
 					);
 				})}
 			</div>
-			<p className="px-4 md:px-[30%] text-center text-xl lg:text-3xl text-black font-semibold">
+			<p className="px-4 md:px-[30%] text-center text-lg lg:text-2xl text-black font-semibold">
 				** We may modify/add new items in Roadmap so as to keep up with the
 				latest trends in Blockchain and Crypto Industry. We would always like to
 				bring the best for our community.
