@@ -2,12 +2,16 @@
 import { Paragraph } from "@/components/Paragraph";
 import { SectionContainer } from "@/components/SectionContainer";
 import { Roadmap } from "@/components/Roadmap";
-import Footer from "@/components/Footer";
 import Title from "@/components/Title";
 import Link from "next/link";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
+import logo from "@/img/logo.png"
 import { useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTwitter,faInstagram,faDiscord,faMedium,faTelegram,faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faAmazon } from "@fortawesome/free-brands-svg-icons";
 
 const socials = [
   {
@@ -41,6 +45,12 @@ const socials = [
     img: "", 
   },
 ]
+
+const NavItem = ({link, children}) => {
+  return <div className="w-12 h-12 rounded-full bg-[#48414d] flex items-center justify-center">
+    <a href={link} className="">{children}</a>
+  </div>
+}
 export default function Home() {
 	useEffect(() => {
 		Aos.init({ duration: 600 });
@@ -48,19 +58,29 @@ export default function Home() {
 	return (
 		<main className="text-primary">
 			<header className="z-50 md:block">
-				<div className="px-4 lg:px-40 py-8 text-xs flex items-center justify-between bg-dark text-white">
-					<span>SOCIALS</span>
-					<span>LOGO</span>
+				<div className="px-4 lg:px-40 py-2 text-xs flex items-center justify-between bg-dark text-white">
+          <Image src={logo} alt="LOGO" className="h-20 w-20"></Image>
 					<div className="hidden md:flex gap-4">
-						<Link href="https://instagram.com">Insta</Link>
-						<Link href="https://twitter.com">Twitter</Link>
-						<Link href="https://telegram.org">Telegram</Link>
-						<Link href="https://discord.com">Discord</Link>
-						<Link href="https://youtube.com">Youtube</Link>
-						<Link href="https://medium.com">Medium</Link>
+            <NavItem link="https://instagram.com">
+              <FontAwesomeIcon icon={faInstagram} size="xl" />
+            </NavItem>
+            <NavItem link="https://twitter.com">
+              <FontAwesomeIcon icon={faTwitter} size="xl" />
+            </NavItem>
+            <NavItem link="https://telegram.org"> 
+              <FontAwesomeIcon icon={faTelegram} size="xl" />
+            </NavItem>
+            <NavItem link="https://discord.com">
+              <FontAwesomeIcon icon={faDiscord} size="xl" />
+            </NavItem>
+            <NavItem link="https://youtube.com">
+              <FontAwesomeIcon icon={faYoutube} size="xl" />
+            </NavItem>
+            <NavItem link="https://medium.com">
+              <FontAwesomeIcon icon={faMedium} size="xl" />
+            </NavItem>
 					</div>
 				</div>
-
 				<div className="hidden lg:flex px-40 py-4 items-center justify-center bg-white text-black">
 					<nav className="font-extrabold space-x-20">
 						<Link href="">HOME</Link>
