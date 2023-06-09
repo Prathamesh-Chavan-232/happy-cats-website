@@ -45,7 +45,7 @@ export const Roadmap = () => {
 		>
 			<div className="flex flex-col gap-20">
         <Title className="text-center">ROADMAP</Title>
-        <Image src={bamboo} alt="bamboo" className="hidden lg:block absolute top-60 left-[5%] xl:left-[45%]"></Image>
+        <Image src={bamboo} alt="bamboo" className="hidden lg:block absolute top-60 left-[5%] xl:left-[44%]"></Image>
         <Image src={bamboo2} alt="bamboo" className="lg:hidden absolute top-60 left-0"></Image>
 				{roadmap.map((item, i) => {
 					return (

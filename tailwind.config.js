@@ -14,7 +14,7 @@ module.exports = {
 				hero: "url('../img/hero.png')",
 				about: "url('../img/about.png')",
 				tokenomics: "url('../img/tokenomics.png')",
-				roadmap: "url('../img/roadmap-2.png')",
+				roadmap: "url('../img/roadmap.png')",
 				xoxo: "url('../img/xoxo.png')",
         splash: "url('../img/splash.png')"
 			},
