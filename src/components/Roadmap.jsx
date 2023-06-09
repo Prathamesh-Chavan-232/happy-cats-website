@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Paragraph } from "./Paragraph";
 import Title from "./Title";
 import bamboo from "@/img/bamboo.png"
+import bamboo2 from "@/img/bamboo-2.png"
 
 export const Roadmap = () => {
 	const roadmap = [
@@ -44,6 +45,7 @@ export const Roadmap = () => {
 			<div className="flex flex-col gap-20">
         <Title className="text-center">ROADMAP</Title>
         <Image src={bamboo} alt="bamboo" className="hidden lg:block absolute top-60 left-[5%] xl:left-[45%]"></Image>
+        <Image src={bamboo2} alt="bamboo" className="lg:hidden absolute top-60 left-0"></Image>
 				{roadmap.map((item, i) => {
 					return (
 						<div key={i} className={"timeline-elem " + item.align}>
