@@ -11,6 +11,8 @@ import { useState, useEffect } from "react";
 import cloud1 from "@/img/cloud-1.png";
 import cloud2 from "@/img/cloud-2.png";
 import cloud3 from "@/img/cloud-3.png";
+import cloud4 from "@/img/cloud-4.png";
+import cloud5 from "@/img/cloud-5.png";
 
 import "aos/dist/aos.css";
 import Aos from "aos";
@@ -52,7 +54,7 @@ const socials = [
 
 const ContentWrapper = () => {
 	return (
-		<div>
+		<div className="overflow-x-hidden">
 			{/* Hero */}
 			<Header />
 			{/* Hero */}
@@ -60,7 +62,7 @@ const ContentWrapper = () => {
 				<div className="flex flex-col justify-center gap-20">
 					<h1
 						data-aos="zoom-in"
-						className="xl:mt-32 text-white text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-extrabold "
+						className="mt-20 xl:mt-32 text-white text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-extrabold "
 					>
 						JOIN HAPPY CATS
 					</h1>
@@ -82,8 +84,10 @@ const ContentWrapper = () => {
 			</SectionContainer>
 
 			{/* About */}
-			<SectionContainer id="about" className="py-40 bg-about">
-				<Image src={cloud1} alt="" />
+			<SectionContainer id="about" className="py-10 lg:py-64 relative bg-about">
+				<Image src={cloud1} alt="" className="hidden lg:block absolute top-0 left-0" />
+				<Image src={cloud2} alt="" className="absolute -top-20 right-0" />
+				<Image src={cloud3} alt="" className="absolute -top-36 right-[50%] lg:-top-16 lg:-right-20" />
 				<div
 					data-aos="fade"
 					className="flex flex-col items-center justify-center gap-12"
@@ -114,7 +118,10 @@ const ContentWrapper = () => {
 				</div>
 			</SectionContainer>
 
-			<SectionContainer id="tokenomics" className="py-40 bg-tokenomics">
+			<SectionContainer id="tokenomics" className="relative py-10 lg:py-64 bg-tokenomics">
+        
+				<Image src={cloud5} alt="" className="absolute -top-20 left-20 lg:-top-36 lg:left-[50%]" />
+				<Image src={cloud4} alt="" className="absolute -top-20 right-20 lg:-top-24 lg:right-[50%]" />
 				<div className="flex flex-col items-center justify-center gap-12">
 					<Title anim="zoom-in" className="text-tokenomics">
 						TOKENOMICS
@@ -142,7 +149,8 @@ const ContentWrapper = () => {
 
 			<Roadmap />
 
-			<SectionContainer id="footer" className="py-40 bg-splash">
+			<SectionContainer id="footer" className="relative py-40 bg-splash">
+			<Image src={cloud3} alt="" className="absolute -top-20 left-[40%] lg:left-[75%]" />
 				<div className="px-4 space-y-20">
 					<Title className="text-white font-extrabold">SOCIALS</Title>
 					<div className="font-semibold text-white text-lg lg:text-4xl px-4">
@@ -179,7 +187,7 @@ export default function Home() {
 		setLoading(true);
     setTimeout(()=>{
       setLoading(false)
-    },3000)
+    },2000)
 		Aos.init({ duration: 600 });
 	}, []);
   

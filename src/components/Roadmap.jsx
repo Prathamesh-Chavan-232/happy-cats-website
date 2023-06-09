@@ -3,6 +3,7 @@ import { Paragraph } from "./Paragraph";
 import Title from "./Title";
 import bamboo from "@/img/bamboo.png"
 import bamboo2 from "@/img/bamboo-2.png"
+import cloud4 from "@/img/cloud-4.png";
 
 export const Roadmap = () => {
 	const roadmap = [
