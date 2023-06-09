@@ -1,99 +1,61 @@
 "use client";
+import Title from "@/components/Title";
 import { Paragraph } from "@/components/Paragraph";
 import { SectionContainer } from "@/components/SectionContainer";
 import { Roadmap } from "@/components/Roadmap";
-import Title from "@/components/Title";
+
 import Link from "next/link";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import Image from "next/image";
-import logo from "@/img/logo.png"
-import { useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter,faInstagram,faDiscord,faMedium,faTelegram,faYoutube } from '@fortawesome/free-brands-svg-icons'
-import cloud1 from "@/img/cloud-1.png"
+import { useState, useEffect } from "react";
+
+import cloud1 from "@/img/cloud-1.png";
+import cloud2 from "@/img/cloud-2.png";
+import cloud3 from "@/img/cloud-3.png";
+
+import "aos/dist/aos.css";
+import Aos from "aos";
+import { Header } from "@/components/Header";
+import { Splash } from "@/components/Splash";
 
 const socials = [
-  {
-    title: "Telegram",
-    link: "https://www.telegram.org",
-    img: "",
-  },
-  {
-    title: "Medium",
-    link: "https://www.medium.com",
-    img: "", 
-  },
-  {
-    title: "Twitter",
-    link: "https://www.twitter.com",
-    img: "", 
-  },
-  {
-    title: "Discord",
-    link: "https://www.discord.org",
-    img: "", 
-  },
-  {
-    title: "Youtube",
-    link: "https://www.youtube.com",
-    img: "", 
-  },
-  {
-    title: "Instagram",
-    link: "https://www.instagram.com",
-    img: "", 
-  },
-]
+	{
+		title: "Telegram",
+		link: "https://www.telegram.org",
+		img: "",
+	},
+	{
+		title: "Medium",
+		link: "https://www.medium.com",
+		img: "",
+	},
+	{
+		title: "Twitter",
+		link: "https://www.twitter.com",
+		img: "",
+	},
+	{
+		title: "Discord",
+		link: "https://www.discord.org",
+		img: "",
+	},
+	{
+		title: "Youtube",
+		link: "https://www.youtube.com",
+		img: "",
+	},
+	{
+		title: "Instagram",
+		link: "https://www.instagram.com",
+		img: "",
+	},
+];
 
-const NavItem = ({link, children}) => {
-  return <div className="w-12 h-12 rounded-full bg-[#48414d] flex items-center justify-center">
-    <a href={link} >{children}</a>
-  </div>
-}
-export default function Home() {
-	useEffect(() => {
-		Aos.init({ duration: 600 });
-	}, []);
+const ContentWrapper = () => {
 	return (
-		<main className="text-primary">
-			<header className="z-50 md:block">
-				<div className="px-4 lg:px-40 py-2 text-xs flex items-center justify-center md:justify-between bg-dark text-white">
-          <Image src={logo} alt="LOGO" className="h-20 w-20"></Image>
-					<div className="hidden md:flex gap-4">
-            <NavItem link="https://instagram.com">
-              <FontAwesomeIcon icon={faInstagram} size="xl" />
-            </NavItem>
-            <NavItem link="https://twitter.com">
-              <FontAwesomeIcon icon={faTwitter} size="xl" />
-            </NavItem>
-            <NavItem link="https://telegram.org"> 
-              <FontAwesomeIcon icon={faTelegram} size="xl" />
-            </NavItem>
-            <NavItem link="https://discord.com">
-              <FontAwesomeIcon icon={faDiscord} size="xl" />
-            </NavItem>
-            <NavItem link="https://youtube.com">
-              <FontAwesomeIcon icon={faYoutube} size="xl" />
-            </NavItem>
-            <NavItem link="https://medium.com">
-              <FontAwesomeIcon icon={faMedium} size="xl" />
-            </NavItem>
-					</div>
-				</div>
-				<div className="hidden lg:flex px-40 py-4 items-center justify-center bg-white text-black">
-					<nav className="font-extrabold space-x-20">
-						<Link href="#">HOME</Link>
-						<Link href="#about">ABOUT</Link>
-						<Link href="#xoxo">NFTS</Link>
-						<Link href="#tokenomics">TOKENOMICS</Link>
-						<Link href="#roadmap">ROADMAP</Link>
-						<Link href="#socials">SOCIALS</Link>
-						<Link href="#xoxo">PARTNERS</Link>
-					</nav>
-				</div>
-			</header>
-
+		<div>
+			{/* Hero */}
+			<Header />
+			{/* Hero */}
 			<SectionContainer className="bg-hero h-screen w-screen">
 				<div className="flex flex-col justify-center gap-20">
 					<h1
@@ -119,8 +81,9 @@ export default function Home() {
 				</div>
 			</SectionContainer>
 
+			{/* About */}
 			<SectionContainer id="about" className="py-40 bg-about">
-        <Image ></Image>
+				<Image src={cloud1} alt="" />
 				<div
 					data-aos="fade"
 					className="flex flex-col items-center justify-center gap-12"
@@ -179,28 +142,50 @@ export default function Home() {
 
 			<Roadmap />
 
-      <SectionContainer id="footer" className="py-40 bg-splash">
-        <div className="px-4 space-y-20">
-           
-        <Title className="text-white font-extrabold">SOCIALS</Title>
-        <div className="font-semibold text-white text-lg lg:text-4xl px-4">Our Telegram and Twitter are the best places to stay updated on the latest HAPPY CATS news and connect with fellow community members</div>
-        <div className="mx-[20%] xl:mx-60 2xl:mx-96 grid grid-cols-1 xl:grid-cols-2 gap-20 justify-center">
-          {
-            socials.map((item, i) => {
-              return <button key={i} className="px-10 py-6 border border-black bg-white text-2xl text-black font-bold rounded-full baseline shadow-xl">
-                <a href={item.link}>{item.title}</a>
-              </button>
-            })
-          }         
+			<SectionContainer id="footer" className="py-40 bg-splash">
+				<div className="px-4 space-y-20">
+					<Title className="text-white font-extrabold">SOCIALS</Title>
+					<div className="font-semibold text-white text-lg lg:text-4xl px-4">
+						Our Telegram and Twitter are the best places to stay updated on the
+						latest HAPPY CATS news and connect with fellow community members
+					</div>
+					<div className="mx-[20%] xl:mx-60 2xl:mx-96 grid grid-cols-1 xl:grid-cols-2 gap-20 justify-center">
+						{socials.map((item, i) => {
+							return (
+								<button
+									key={i}
+									className="px-10 py-6 border border-black bg-white text-2xl text-black font-bold rounded-full baseline shadow-xl"
+								>
+									<a href={item.link}>{item.title}</a>
+								</button>
+							);
+						})}
+					</div>
+				</div>
+			</SectionContainer>
+			<SectionContainer id="xoxo" className="h-screen bg-xoxo">
+				<Title anim="fade" className={"text-center text-white"}>
+					PARTNERS
+				</Title>
+			</SectionContainer>
+		</div>
+	);
+}
 
-          </div>
-        </div>
-      </SectionContainer>
-      <SectionContainer id="xoxo" className="h-screen bg-xoxo">
-        <Title anim="fade" className={"text-center text-white"}>
-          PARTNERS
-        </Title>
-      </SectionContainer>
-    </main>
-  );
+export default function Home() {
+
+  const [loading, setLoading] = useState(false);
+	useEffect(() => {
+		setLoading(true);
+    setTimeout(()=>{
+      setLoading(false)
+    },3000)
+		Aos.init({ duration: 600 });
+	}, []);
+  
+	return (
+		<main>
+			{loading ? <Splash /> : <ContentWrapper />}
+		</main>
+	);
 }
