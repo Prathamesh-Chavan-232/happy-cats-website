@@ -64,7 +64,7 @@ const ContentWrapper = () => {
 			<Header />
 			{/* Hero */}
 			<SectionContainer className="bg-hero h-screen w-screen">
-				<div className="flex flex-col justify-center gap-20">
+				<div className="flex flex-col justify-center items-center gap-16">
 					<h1
 						data-aos="zoom-in"
 						className="mt-20 xl:mt-32 text-white text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-extrabold "
@@ -77,11 +77,11 @@ const ContentWrapper = () => {
 						Dogs, Peeps are over. It’s time for our “Happy Happy Cat” to take
 						over the Web3 world.
 					</div>
-					<div className="flex justify-around">
-						<button className="px-6 py-4 md:px-24 md:py-8 border border-white bg-white text-lg md:text-2xl text-black font-bold rounded-full baseline">
+					<div className="flex gap-6">
+						<button className="px-6 py-4 md:px-24 md:py-8 border border-black bg-white text-lg md:text-2xl text-black font-bold rounded-full baseline">
 							<a href="#">Buy Now</a>
 						</button>
-						<button className="px-6 py-4 md:px-24 md:py-8 border border-white bg-white text-lg md:text-2xl text-black font-bold rounded-full baseline">
+						<button className="px-6 py-4 md:px-24 md:py-8 border border-black bg-white text-lg md:text-2xl text-black font-bold rounded-full baseline">
 							<a href="#">Claim Airdrop</a>
 						</button>
 					</div>
@@ -155,21 +155,21 @@ const ContentWrapper = () => {
 			<Roadmap />
 
 			<SectionContainer id="footer" className="relative py-40 bg-footer">
-			<Image src={cloud3} alt="" data-aos="fade" className="absolute -top-20 left-[40%] lg:left-[75%]" />
-				<div className="px-4 space-y-20">
+			<Image src={cloud3} alt="" data-aos="fade" className="absolute -top-20 left-[35%] lg:left-[80%]" />
+				<div className="px-4 lg:px-12 flex flex-col items-center justify-center gap-20">
 					<Title className="text-white font-extrabold">SOCIALS</Title>
 					<div className="font-semibold text-white text-lg lg:text-4xl px-4">
 						Our Telegram and Twitter are the best places to stay updated on the
 						latest HAPPY CATS news and connect with fellow community members
 					</div>
-					<div className="md:mx-[10%] xl:mx-80 2xl:mx-96 grid grid-cols-2 gap-4 lg:gap-20 justify-center">
+					<div className="xl:mx-80 2xl:mx-96 grid grid-cols-2 gap-4 lg:gap-20 justify-center">
 						{socials.map((item, i) => {
 							return (
 								<button
 									key={i}
-									className="px-10 py-4 border border-black bg-white text-md lg:text-2xl text-black text-center font-bold rounded-full baseline shadow-xl"
+									className="px-12 py-2 border border-black bg-white text-md lg:text-2xl text-black text-center font-bold rounded-full baseline shadow-xl"
 								>
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center justify-center gap-4">
                     <Image src={item.img} alt="" /> 
                     <a href={item.link} className="text-center">{item.title}</a>
                   </div>
