@@ -16,7 +16,8 @@ module.exports = {
 				tokenomics: "url('../img/tokenomics.png')",
 				roadmap: "url('../img/roadmap.png')",
 				xoxo: "url('../img/xoxo.png')",
-        splash: "url('../img/splash.png')"
+        splash: "url('../img/splash.jpg')",
+        footer: "url('../img/footer.png')",
 			},
 			colors: {
 				primary: "#000",

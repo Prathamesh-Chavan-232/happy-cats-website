@@ -4,7 +4,6 @@ import { Paragraph } from "@/components/Paragraph";
 import { SectionContainer } from "@/components/SectionContainer";
 import { Roadmap } from "@/components/Roadmap";
 
-import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -18,37 +17,43 @@ import "aos/dist/aos.css";
 import Aos from "aos";
 import { Header } from "@/components/Header";
 import { Splash } from "@/components/Splash";
+import twitter from "@/img/Twitter.png"
+import telegram from "@/img/Telegram.png"
+import instagram from "@/img/Instagram.png"
+import medium from "@/img/Medium.png"
+import discord from "@/img/discord.png"
+import youtube from "@/img/YouTube.png"
 
 const socials = [
 	{
 		title: "Telegram",
 		link: "https://www.telegram.org",
-		img: "",
+		img: telegram,
 	},
 	{
 		title: "Medium",
 		link: "https://www.medium.com",
-		img: "",
+		img: medium,
 	},
 	{
 		title: "Twitter",
 		link: "https://www.twitter.com",
-		img: "",
+		img: twitter,
 	},
 	{
 		title: "Discord",
 		link: "https://www.discord.org",
-		img: "",
+		img: discord,
 	},
 	{
 		title: "Youtube",
 		link: "https://www.youtube.com",
-		img: "",
+		img: youtube,
 	},
 	{
 		title: "Instagram",
 		link: "https://www.instagram.com",
-		img: "",
+		img: instagram,
 	},
 ];
 
@@ -85,9 +90,9 @@ const ContentWrapper = () => {
 
 			{/* About */}
 			<SectionContainer id="about" className="py-10 lg:py-64 relative bg-about">
-				<Image src={cloud1} alt="" className="hidden lg:block absolute top-0 left-0" />
-				<Image src={cloud2} alt="" className="absolute -top-20 right-0" />
-				<Image src={cloud3} alt="" className="absolute -top-36 right-[50%] lg:-top-16 lg:-right-20" />
+				<Image src={cloud1} alt="" data-aos="fade" className="hidden lg:block absolute top-0 left-0" />
+				<Image src={cloud2} alt="" data-aos="fade" className="absolute -top-20 right-0" />
+				<Image src={cloud3} alt="" data-aos="fade" className="absolute -top-36 right-[50%] lg:-top-16 lg:-right-20" />
 				<div
 					data-aos="fade"
 					className="flex flex-col items-center justify-center gap-12"
@@ -120,8 +125,8 @@ const ContentWrapper = () => {
 
 			<SectionContainer id="tokenomics" className="relative py-10 lg:py-64 bg-tokenomics">
         
-				<Image src={cloud5} alt="" className="absolute -top-20 left-20 lg:-top-36 lg:left-[50%]" />
-				<Image src={cloud4} alt="" className="absolute -top-20 right-20 lg:-top-24 lg:right-[50%]" />
+				<Image src={cloud5} alt="" data-aos="fade" className="absolute -top-20 left-0 lg:-top-36 lg:left-[50%]" />
+				<Image src={cloud4} alt="" data-aos="fade" className="absolute -top-20 right-0 lg:-top-24 lg:right-[50%]" />
 				<div className="flex flex-col items-center justify-center gap-12">
 					<Title anim="zoom-in" className="text-tokenomics">
 						TOKENOMICS
@@ -149,22 +154,25 @@ const ContentWrapper = () => {
 
 			<Roadmap />
 
-			<SectionContainer id="footer" className="relative py-40 bg-splash">
-			<Image src={cloud3} alt="" className="absolute -top-20 left-[40%] lg:left-[75%]" />
+			<SectionContainer id="footer" className="relative py-40 bg-footer">
+			<Image src={cloud3} alt="" data-aos="fade" className="absolute -top-20 left-[40%] lg:left-[75%]" />
 				<div className="px-4 space-y-20">
 					<Title className="text-white font-extrabold">SOCIALS</Title>
 					<div className="font-semibold text-white text-lg lg:text-4xl px-4">
 						Our Telegram and Twitter are the best places to stay updated on the
 						latest HAPPY CATS news and connect with fellow community members
 					</div>
-					<div className="mx-[20%] xl:mx-60 2xl:mx-96 grid grid-cols-1 xl:grid-cols-2 gap-20 justify-center">
+					<div className="md:mx-[10%] xl:mx-80 2xl:mx-96 grid grid-cols-2 gap-4 lg:gap-20 justify-center">
 						{socials.map((item, i) => {
 							return (
 								<button
 									key={i}
-									className="px-10 py-6 border border-black bg-white text-2xl text-black font-bold rounded-full baseline shadow-xl"
+									className="px-10 py-4 border border-black bg-white text-md lg:text-2xl text-black text-center font-bold rounded-full baseline shadow-xl"
 								>
-									<a href={item.link}>{item.title}</a>
+                  <div className="flex items-center gap-4">
+                    <Image src={item.img} alt="" /> 
+                    <a href={item.link} className="text-center">{item.title}</a>
+                  </div>
 								</button>
 							);
 						})}
