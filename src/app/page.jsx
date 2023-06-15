@@ -190,15 +190,23 @@ const ContentWrapper = () => {
 
 export default function Home() {
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [first, setFirst] = useState(true)
 	useEffect(() => {
-		setLoading(true);
-    setTimeout(()=>{
-      setLoading(false)
-    },2000)
-		Aos.init({ duration: 600 });
-	}, []);
-  
+
+    if(first) {  
+      setLoading(true);
+
+      setTimeout(()=>{
+        setLoading(false)
+      }, 2000)
+
+    }
+
+    setFirst(false)
+    Aos.init({ duration: 600 });
+    }, []);
+
 	return (
 		<main>
 			{loading ? <Splash /> : <ContentWrapper />}
