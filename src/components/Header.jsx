@@ -50,10 +50,9 @@ export const Header = () => {
 				<nav className="font-extrabold space-x-20">
 					<Link href="#">HOME</Link>
 					<Link href="#about">ABOUT</Link>
-					<Link href="#xoxo">NFTS</Link>
 					<Link href="#tokenomics">TOKENOMICS</Link>
 					<Link href="#roadmap">ROADMAP</Link>
-					<Link href="#socials">SOCIALS</Link>
+					<Link href="#socials">FAQS</Link>
 					<Link href="#xoxo">PARTNERS</Link>
 				</nav>
 			</div>

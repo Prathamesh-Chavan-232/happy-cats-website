@@ -17,12 +17,12 @@ import "aos/dist/aos.css";
 import Aos from "aos";
 import { Header } from "@/components/Header";
 import { Splash } from "@/components/Splash";
-import twitter from "@/img/Twitter.png"
-import telegram from "@/img/Telegram.png"
-import instagram from "@/img/Instagram.png"
-import medium from "@/img/Medium.png"
-import discord from "@/img/discord.png"
-import youtube from "@/img/YouTube.png"
+import twitter from "@/img/Twitter.png";
+import telegram from "@/img/Telegram.png";
+import instagram from "@/img/Instagram.png";
+import medium from "@/img/Medium.png";
+import discord from "@/img/discord.png";
+import youtube from "@/img/YouTube.png";
 
 const socials = [
 	{
@@ -90,9 +90,24 @@ const ContentWrapper = () => {
 
 			{/* About */}
 			<SectionContainer id="about" className="py-10 lg:py-64 relative bg-about">
-				<Image src={cloud1} alt="" data-aos="fade" className="hidden lg:block absolute top-0 left-0" />
-				<Image src={cloud2} alt="" data-aos="fade" className="absolute -top-20 right-0" />
-				<Image src={cloud3} alt="" data-aos="fade" className="absolute -top-36 right-[50%] lg:-top-16 lg:-right-20" />
+				<Image
+					src={cloud1}
+					alt=""
+					data-aos="fade"
+					className="hidden lg:block absolute top-0 left-0"
+				/>
+				<Image
+					src={cloud2}
+					alt=""
+					data-aos="fade"
+					className="absolute -top-20 right-0"
+				/>
+				<Image
+					src={cloud3}
+					alt=""
+					data-aos="fade"
+					className="absolute -top-36 right-[50%] lg:-top-16 lg:-right-20"
+				/>
 				<div
 					data-aos="fade"
 					className="flex flex-col items-center justify-center gap-12"
@@ -101,19 +116,27 @@ const ContentWrapper = () => {
 						ABOUT US
 					</Title>
 					<Paragraph data-aos="fade-down" className="text-about">
-						<p className="" data-aos="fade">
-							Happy Cat is not just a meme project. We are bringing the best of
-							AI, GPT and Defi together.
+						<p>
+							Inspired by the “Happy Happy Cat” viral meme, Our mission is to
+							make “Every Cat Happy”. With that being said, Charity is something
+							we all strongly believe.
 						</p>
-						<p>{"<< What tools we plan to bring on AI, GPT, Defi>>"}</p>
-						<p>{"<<Metaverse Platform>>"}</p>
+						Happy Cat is not just a meme project. We are bringing the best of
+						AI, Metaverse, and Defi together.
+						<p>
+							Our own “Happy Cat” has arrived. The days of Dogs, Pepes are over.
+							It’s time for our “Happy Cat” to take over the Web3 world.
+						</p>
+						{/* <p>{"<< What tools we plan to bring on AI, GPT, Defi>>"}</p>
+						<p>{"<<Metaverse Platform>>"}</p> */}
 						<p>
 							Our mission is to make “Every Cat Happy”. With that being said,
 							Charity is something we all (Project Founders) strongly believe.
 						</p>
 						<p>
-							We will be donating a significant amount of money to Cat Shelters
-							around the world on a regular basis.
+							Hence, we will be donating a significant amount of money to Cat
+							Shelters around the world on a regular basis. Let’s vibe and get
+							along on this fun & exciting journey with a noble cause.
 						</p>
 						<p>
 							Let’s vibe and get along on this fun & exciting journey with a
@@ -123,10 +146,22 @@ const ContentWrapper = () => {
 				</div>
 			</SectionContainer>
 
-			<SectionContainer id="tokenomics" className="relative py-10 lg:py-64 bg-tokenomics">
-        
-				<Image src={cloud5} alt="" data-aos="fade" className="absolute -top-20 left-0 lg:-top-36 lg:left-[50%]" />
-				<Image src={cloud4} alt="" data-aos="fade" className="absolute -top-20 right-0 lg:-top-24 lg:right-[50%]" />
+			<SectionContainer
+				id="tokenomics"
+				className="relative py-10 lg:py-64 bg-tokenomics"
+			>
+				<Image
+					src={cloud5}
+					alt=""
+					data-aos="fade"
+					className="absolute -top-20 left-0 lg:-top-36 lg:left-[50%]"
+				/>
+				<Image
+					src={cloud4}
+					alt=""
+					data-aos="fade"
+					className="absolute -top-20 right-0 lg:-top-24 lg:right-[50%]"
+				/>
 				<div className="flex flex-col items-center justify-center gap-12">
 					<Title anim="zoom-in" className="text-tokenomics">
 						TOKENOMICS
@@ -154,8 +189,13 @@ const ContentWrapper = () => {
 
 			<Roadmap />
 
-			<SectionContainer id="footer" className="relative py-40 bg-footer">
-			<Image src={cloud3} alt="" data-aos="fade" className="absolute -top-20 left-[35%] lg:left-[80%]" />
+			{/* <SectionContainer id="footer" className="relative py-40 bg-footer">
+				<Image
+					src={cloud3}
+					alt=""
+					data-aos="fade"
+					className="absolute -top-20 left-[35%] lg:left-[80%]"
+				/>
 				<div className="px-4 lg:px-12 flex flex-col items-center justify-center gap-20">
 					<Title className="text-white font-extrabold">SOCIALS</Title>
 					<div className="font-semibold text-white text-lg lg:text-4xl px-4">
@@ -169,15 +209,22 @@ const ContentWrapper = () => {
 									key={i}
 									className="px-12 py-2 border border-black bg-white text-md lg:text-2xl text-black text-center font-bold rounded-full baseline shadow-xl"
 								>
-                  <div className="flex items-center justify-center gap-4">
-                    <Image src={item.img} alt="" /> 
-                    <a href={item.link} className="text-center">{item.title}</a>
-                  </div>
+									<div className="flex items-center justify-center gap-4">
+										<Image src={item.img} alt="" />
+										<a href={item.link} className="text-center">
+											{item.title}
+										</a>
+									</div>
 								</button>
 							);
 						})}
 					</div>
 				</div>
+			</SectionContainer> */}
+			<SectionContainer id="xoxo" className="h-screen bg-footer">
+				<Title anim="fade" className={"text-center text-white"}>
+					FAQS
+				</Title>
 			</SectionContainer>
 			<SectionContainer id="xoxo" className="h-screen bg-xoxo">
 				<Title anim="fade" className={"text-center text-white"}>
@@ -186,30 +233,23 @@ const ContentWrapper = () => {
 			</SectionContainer>
 		</div>
 	);
-}
+};
 
 export default function Home() {
-
-  const [loading, setLoading] = useState(true);
-  const [first, setFirst] = useState(true)
+	const [loading, setLoading] = useState(true);
+	const [first, setFirst] = useState(true);
 	useEffect(() => {
+		if (first) {
+			setLoading(true);
 
-    if(first) {  
-      setLoading(true);
+			setTimeout(() => {
+				setLoading(false);
+			}, 2000);
+		}
 
-      setTimeout(()=>{
-        setLoading(false)
-      }, 2000)
+		setFirst(false);
+		Aos.init({ duration: 600 });
+	}, []);
 
-    }
-
-    setFirst(false)
-    Aos.init({ duration: 600 });
-    }, []);
-
-	return (
-		<main>
-			{loading ? <Splash /> : <ContentWrapper />}
-		</main>
-	);
+	return <main>{loading ? <Splash /> : <ContentWrapper />}</main>;
 }
