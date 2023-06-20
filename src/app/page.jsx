@@ -12,6 +12,7 @@ import cloud2 from "@/img/cloud-2.png";
 import cloud3 from "@/img/cloud-3.png";
 import cloud4 from "@/img/cloud-4.png";
 import cloud5 from "@/img/cloud-5.png";
+import piechart from "@/img/piechart.jpg";
 
 import "aos/dist/aos.css";
 import Aos from "aos";
@@ -166,10 +167,12 @@ const ContentWrapper = () => {
 					<Title anim="zoom-in" className="text-tokenomics">
 						TOKENOMICS
 					</Title>
+					<Image src={piechart} alt="piechart" />
 					<Paragraph className="text-tokenomics">
 						<p>
-							Total Supply is 88 Billions. The number 8 is an extremely lucky
-							number in Chinese numerology.
+							Total Token Supply – 88,000,000,000 (88 Billion). The number 8 is
+							an extremely lucky number in some numerology. It represents
+							prosperity and completeness.
 						</p>
 						<p>
 							It represents prosperity and completeness. The number 88 is
@@ -178,11 +181,39 @@ const ContentWrapper = () => {
 							happiness: 囍 囍
 						</p>
 						<p>
+							Happy Cat will also be a highly deflationary Token. The Team will
+							buyback tokens from open market and burn on regular basis.
+						</p>
+						<p>
 							Cat We will have Buy & Sell Tax. Who does not love Reflections,
 							passive income just by holding our Tokens.
 						</p>
 						<p>Buy Tax - 2% reflection, 2% to buyback wallet</p>
 						<p>Sell Tax – 2% Reflection, 4% to buyback wallet</p>
+					</Paragraph>
+					<Paragraph>
+						<p>
+							Presale – 30% of Total tokens will be available for Whitelisted
+							Pre-sale.{" "}
+						</p>
+						<p>
+							Staking & Farming Platforms – 8% of total supply will be set as
+							Rewards Charity – 10% of total supply is kept aside for Charity
+							and Donations Marketing & CEX
+						</p>
+						<p>
+							Listing – 8% of total supply for Marketing and CEX Listing. Team
+						</p>
+						<p>
+							Future Development – 10% is kept aside for all future Product
+							Developments. Community rewards & Airdrops – 5% is kept aside for
+							rewards.
+						</p>
+						<p>
+							Initial Liquidity – 24% of Total Tokens, we plan to add more
+							liquidity in future.
+						</p>
+						<p>Tokens – only 5% is kept aside for the entire Team</p>
 					</Paragraph>
 				</div>
 			</SectionContainer>
@@ -221,6 +252,7 @@ const ContentWrapper = () => {
 					</div>
 				</div>
 			</SectionContainer> */}
+
 			<SectionContainer id="xoxo" className="h-screen bg-footer">
 				<Title anim="fade" className={"text-center text-white"}>
 					FAQS
