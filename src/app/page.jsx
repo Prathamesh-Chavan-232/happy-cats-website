@@ -167,7 +167,10 @@ const ContentWrapper = () => {
 					<Title anim="zoom-in" className="text-tokenomics">
 						TOKENOMICS
 					</Title>
-					<Image src={piechart} alt="piechart" />
+					<div className="px-4">
+						<Image src={piechart} alt="piechart" />
+					</div>
+
 					<Paragraph className="text-tokenomics">
 						<p>
 							Total Token Supply – 88,000,000,000 (88 Billion). The number 8 is

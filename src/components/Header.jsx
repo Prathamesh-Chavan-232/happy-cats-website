@@ -56,6 +56,29 @@ export const Header = () => {
 					<Link href="#xoxo">PARTNERS</Link>
 				</nav>
 			</div>
+			<div className="flex lg:hidden py-6 items-center justify-center bg-white text-black">
+				<nav className="font-extrabold space-x-8">
+					<Link href="#">
+						<FontAwesomeIcon icon={faInstagram} size="xl" />
+					</Link>
+					<Link href="#">
+						<FontAwesomeIcon icon={faTwitter} size="xl" />
+					</Link>
+					<Link href="#">
+						<FontAwesomeIcon icon={faTelegram} size="xl" />
+					</Link>
+					<Link href="#">
+						<FontAwesomeIcon icon={faDiscord} size="xl" />
+					</Link>
+					<Link href="#">
+						<FontAwesomeIcon icon={faYoutube} size="xl" />
+					</Link>
+					<Link href="#">
+						<FontAwesomeIcon icon={faMedium} size="xl" />
+					</Link>
+				</nav>
+			</div>
+			<div></div>
 		</header>
 	);
 };
