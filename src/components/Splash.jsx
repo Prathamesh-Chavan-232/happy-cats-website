@@ -8,7 +8,11 @@ export const Splash = () => {
 	return (
 		<SectionContainer className="h-screen w-screen bg-splash bg-cover bg-no-repeat">
 			<div className="flex flex-col items-center justify-center text-center gap-24">
-				<Image src={logo} alt="Logo" className="absolute left-10 h-96 w-96" />
+				<Image
+					src={logo}
+					alt="Logo"
+					className="lg:absolute lg:left-10 h-96 w-96"
+				/>
 				<div className="pt-40">
 					<ClimbingBoxLoader
 						speedMultiplier="0.8"

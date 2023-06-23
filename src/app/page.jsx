@@ -25,6 +25,23 @@ import medium from "@/img/Medium.png";
 import discord from "@/img/discord.png";
 import youtube from "@/img/YouTube.png";
 
+import { Chart } from "react-google-charts";
+
+const data = [
+	["", ""],
+	["Team Tokens", 5],
+	["Pre-sale", 30],
+	["Initial Liquidity", 24],
+	["Farming rewards", 8],
+	["Marketing & CEX Listing", 8],
+	["Future Development", 10],
+	["Charity", 10],
+	["Community Rewards", 5],
+];
+const options = {
+	pieHole: 0.5,
+};
+
 const socials = [
 	{
 		title: "Telegram",
@@ -163,12 +180,19 @@ const ContentWrapper = () => {
 					data-aos="fade"
 					className="absolute -top-20 right-0 lg:-top-24 lg:right-[50%]"
 				/>
-				<div className="flex flex-col items-center justify-center gap-12">
+				<div className="relative flex flex-col justify-center gap-12">
 					<Title anim="zoom-in" className="text-tokenomics">
 						TOKENOMICS
 					</Title>
-					<div className="px-4">
-						<Image src={piechart} alt="piechart" />
+					<div className="lg:mx-[20%]">
+						<Chart
+							chartType="PieChart"
+							options={options}
+							data={data}
+							width={"100%"}
+							height={"400px"}
+						/>
+						{/* <Image src={piechart} alt="piechart" /> */}
 					</div>
 
 					<Paragraph className="text-tokenomics">
