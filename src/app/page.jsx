@@ -308,7 +308,7 @@ export default function Home() {
 
 		setFirst(false);
 		Aos.init({ duration: 600 });
-	}, []);
+	}, [first]);
 
 	return <main>{loading ? <Splash /> : <ContentWrapper />}</main>;
 }

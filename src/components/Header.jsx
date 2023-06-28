@@ -15,7 +15,9 @@ import {
 const NavItem = ({ link, children }) => {
 	return (
 		<div className="w-12 h-12 rounded-full bg-[#48414d] flex items-center justify-center">
-			<a href={link}>{children}</a>
+			<a href={link} target="_blank">
+				{children}
+			</a>
 		</div>
 	);
 };
@@ -54,26 +56,27 @@ export const Header = () => {
 					<Link href="#roadmap">ROADMAP</Link>
 					<Link href="#socials">FAQS</Link>
 					<Link href="#xoxo">PARTNERS</Link>
+					<Link href="/video">VIDEO</Link>
 				</nav>
 			</div>
 			<div className="flex lg:hidden py-6 items-center justify-center bg-white text-black">
 				<nav className="font-extrabold space-x-8">
-					<Link href="#">
+					<Link href="https://instagram.com" target="_blank">
 						<FontAwesomeIcon icon={faInstagram} size="xl" />
 					</Link>
-					<Link href="#">
+					<Link href="https://twitter.com" target="_blank">
 						<FontAwesomeIcon icon={faTwitter} size="xl" />
 					</Link>
-					<Link href="#">
+					<Link href="https://telegram.org" target="_blank">
 						<FontAwesomeIcon icon={faTelegram} size="xl" />
 					</Link>
-					<Link href="#">
+					<Link href="https://discord.com" target="_blank">
 						<FontAwesomeIcon icon={faDiscord} size="xl" />
 					</Link>
-					<Link href="#">
+					<Link href="https://youtube.com" target="_blank">
 						<FontAwesomeIcon icon={faYoutube} size="xl" />
 					</Link>
-					<Link href="#">
+					<Link href="https://medium.com" target="_blank">
 						<FontAwesomeIcon icon={faMedium} size="xl" />
 					</Link>
 				</nav>
