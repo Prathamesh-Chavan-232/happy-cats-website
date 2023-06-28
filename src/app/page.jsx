@@ -96,10 +96,10 @@ const ContentWrapper = () => {
 						over the Web3 world.
 					</div>
 					<div className="flex gap-6">
-						<button className="px-6 py-4 md:px-24 md:py-8 border-r-[16px] border-b-[16px] border-btn-pink bg-white text-lg md:text-2xl text-btn-purple font-bold rounded-full baseline">
+						<button className="px-6 py-4 md:px-24 md:py-8 border-r-8 border-b-8 lg:border-r-[16px] lg:border-b-[16px] border-btn-pink bg-white text-lg md:text-2xl text-btn-purple font-bold rounded-full baseline">
 							<a href="#">Buy Now</a>
 						</button>
-						<button className="px-6 py-4 md:px-24 md:py-8 border-r-[16px] border-b-[16px] border-btn-pink bg-white text-lg md:text-2xl text-btn-purple font-bold rounded-full baseline">
+						<button className="px-6 py-4 md:px-24 md:py-8 border-r-8 border-b-8 lg:border-r-[16px] lg:border-b-[16px] border-btn-pink bg-white text-lg md:text-2xl text-btn-purple font-bold rounded-full baseline">
 							<a href="#">Claim Airdrop</a>
 						</button>
 					</div>
