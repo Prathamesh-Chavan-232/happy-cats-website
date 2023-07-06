@@ -81,11 +81,11 @@ const ContentWrapper = () => {
 			{/* Hero */}
 			<Header />
 			{/* Hero */}
-			<SectionContainer className="bg-hero h-screen w-screen">
-				<div className="flex flex-col justify-center items-center gap-16">
+			<SectionContainer className="pb-40 bg-hero h-full w-screen pt-64">
+				<div className="flex flex-col items-center justify-center gap-32">
 					<h1
 						data-aos="zoom-in"
-						className="mt-20 xl:mt-32 text-white text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-extrabold "
+						className="mt-20 xl:mt-32 text-white text-center text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-extrabold "
 					>
 						JOIN HAPPY CATS
 					</h1>
@@ -180,21 +180,19 @@ const ContentWrapper = () => {
 					data-aos="fade"
 					className="absolute -top-20 right-0 lg:-top-24 lg:right-[50%]"
 				/>
-				<div className="relative flex flex-col justify-center gap-12">
+				{/* <Image src={piechart} alt="piechart" /> */}
+				<div className="relative text-center space-y-12">
 					<Title anim="zoom-in" className="text-tokenomics">
 						TOKENOMICS
 					</Title>
-					<div className="lg:mx-[20%]">
-						<Chart
-							chartType="PieChart"
-							options={options}
-							data={data}
-							width={"100%"}
-							height={"400px"}
-						/>
-						{/* <Image src={piechart} alt="piechart" /> */}
-					</div>
-
+					<Chart
+						chartType="PieChart"
+						options={options}
+						data={data}
+						width={"100%"}
+						height={"300px"}
+						className="px-4 lg:px-[20%]"
+					/>
 					<Paragraph className="text-tokenomics">
 						<p>
 							Total Token Supply – 88,000,000,000 (88 Billion). The number 8 is

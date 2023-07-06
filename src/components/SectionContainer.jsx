@@ -5,8 +5,8 @@ export const SectionContainer = ({ id, children, className, anim }) => {
 		<div
 			id={id}
 			className={
-				(className || " ") +
-				" bg-cover bg-no-repeat flex items-center justify-center text-center"
+				"bg-cover bg-no-repeat bg-center object-cover flex flex-col items-center justify-center text-left " +
+				(className || " ")
 			}
 		>
 			<section data-aos={anim}>{children}</section>

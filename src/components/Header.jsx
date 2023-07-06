@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/img/logo.png";
+import { Hamburger } from "./Hamburger";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -25,9 +26,9 @@ const NavItem = ({ link, children }) => {
 export const Header = () => {
 	return (
 		<header className="z-50 md:block">
-			<div className="px-4 lg:px-40 py-2 text-xs flex items-center justify-center md:justify-between bg-dark text-white">
+			<div className="px-4 lg:px-40 py-2 text-xs flex items-center justify-between bg-dark text-white">
 				<Image src={logo} alt="LOGO" className="h-20 w-20"></Image>
-				<div className="hidden md:flex gap-4">
+				<div className="hidden lg:flex gap-4">
 					<NavItem link="https://instagram.com">
 						<FontAwesomeIcon icon={faInstagram} size="xl" />
 					</NavItem>
@@ -47,6 +48,7 @@ export const Header = () => {
 						<FontAwesomeIcon icon={faMedium} size="xl" />
 					</NavItem>
 				</div>
+				<Hamburger />
 			</div>
 			<div className="hidden lg:flex px-40 py-4 items-center justify-center bg-white text-black">
 				<nav className="font-extrabold space-x-20">
@@ -61,27 +63,26 @@ export const Header = () => {
 			</div>
 			<div className="flex lg:hidden py-6 items-center justify-center bg-white text-black">
 				<nav className="font-extrabold space-x-8">
-					<Link href="https://instagram.com" target="_blank">
+					<a href="https://instagram.com" target="_blank">
 						<FontAwesomeIcon icon={faInstagram} size="xl" />
-					</Link>
-					<Link href="https://twitter.com" target="_blank">
+					</a>
+					<a href="https://twitter.com" target="_blank">
 						<FontAwesomeIcon icon={faTwitter} size="xl" />
-					</Link>
-					<Link href="https://telegram.org" target="_blank">
+					</a>
+					<a href="https://telegram.org" target="_blank">
 						<FontAwesomeIcon icon={faTelegram} size="xl" />
-					</Link>
-					<Link href="https://discord.com" target="_blank">
+					</a>
+					<a href="https://discord.com" target="_blank">
 						<FontAwesomeIcon icon={faDiscord} size="xl" />
-					</Link>
-					<Link href="https://youtube.com" target="_blank">
+					</a>
+					<a href="https://youtube.com" target="_blank">
 						<FontAwesomeIcon icon={faYoutube} size="xl" />
-					</Link>
-					<Link href="https://medium.com" target="_blank">
+					</a>
+					<a href="https://medium.com" target="_blank">
 						<FontAwesomeIcon icon={faMedium} size="xl" />
-					</Link>
+					</a>
 				</nav>
 			</div>
-			<div></div>
 		</header>
 	);
 };

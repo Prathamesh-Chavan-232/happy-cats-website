@@ -1,11 +1,9 @@
 const Title = ({ anim, children, className, ...props }) => {
 	return (
 		<p
-      
-      data-aos={anim}
+			data-aos={anim}
 			className={
-				"text-4xl md:text-7xl font-extrabold relative z-20 " +
-				(className || "")
+				"text-4xl md:text-7xl font-extrabold relative z-20 " + (className || "")
 			}
 		>
 			{children}
