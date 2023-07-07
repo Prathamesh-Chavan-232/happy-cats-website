@@ -6,7 +6,7 @@ import { SectionContainer } from "./SectionContainer";
 
 export const Splash = () => {
 	return (
-		<SectionContainer className="h-screen w-screen bg-splash bg-cover bg-no-repeat">
+		<SectionContainer className="h-screen w-screen bg-splash bg-cover bg-no-repeat overflow-hidden">
 			<div className="flex flex-col items-center justify-center text-center gap-24">
 				<Image
 					src={logo}

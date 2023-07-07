@@ -26,7 +26,7 @@ const NavItem = ({ link, children }) => {
 export const Header = () => {
 	return (
 		<header className="z-50 md:block">
-			<div className="px-4 lg:px-40 py-2 text-xs flex items-center justify-between bg-dark text-white">
+			<div className="px-8 lg:px-40 py-2 text-xs flex items-center justify-between bg-dark text-white">
 				<Image src={logo} alt="LOGO" className="h-20 w-20"></Image>
 				<div className="hidden lg:flex gap-4">
 					<NavItem link="https://instagram.com">
