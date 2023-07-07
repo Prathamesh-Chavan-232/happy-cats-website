@@ -33,6 +33,15 @@ export const Hamburger = () => {
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);
 	};
+	const navList = [
+		"HOME",
+		"ABOUT",
+		"ROADMAP",
+		"TOKENOMICS",
+		"FAQS",
+		"PARNTERS",
+		"WHITEPAPER",
+	];
 
 	return (
 		<div className="lg:hidden">
@@ -53,13 +62,11 @@ export const Hamburger = () => {
 					</button>
 				</div>
 				<div className="py-16 px-8 flex flex-col gap-12 text-xl font-extrabold">
-					<a href="#home">HOME</a>
-					<a href="#about">ABOUT</a>
-					<a href="#roadmap">ROADMAP</a>
-					<a href="#tokenomics">TOKENOMICS</a>
-					<a href="#faqs">FAQS</a>
-					<a href="#partners">PARTNERS</a>
-					<a href="/video">WHITEPAPER</a>
+					{navList.map((nav, i) => {
+						<a key={i} href="#home" onClick={toggleMenu}>
+							{nav}
+						</a>;
+					})}
 				</div>
 			</m.div>
 		</div>
