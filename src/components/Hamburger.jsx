@@ -53,20 +53,22 @@ export const Hamburger = () => {
 				variants={menuVariants}
 				transition={menuTransition}
 			>
-				<div className="py-5 lg:px-24 lg:py-10 flex items-center justify-center gap-4 text-sm lg:absolute lg:right-10">
+				<div className="py-5 lg:px-24 lg:py-10 text-sm lg:absolute lg:right-10">
 					<button
 						onClick={toggleMenu}
 						className="bg-white text-black w-12 h-12 rounded-full text-2xl font-extrabold absolute top-[3%] right-[10%]"
 					>
 						X
 					</button>
-				</div>
-				<div className="py-16 px-8 flex flex-col gap-12 text-xl font-extrabold">
-					{navList.map((nav, i) => {
-						<a key={i} href="#home" onClick={toggleMenu}>
-							{nav}
-						</a>;
-					})}
+					<div className="py-16 px-8 flex flex-col gap-12 text-xl font-extrabold text-white">
+						{navList.map((item, i) => {
+							return (
+								<a key={i} href="#home" onClick={toggleMenu}>
+									{item}
+								</a>
+							);
+						})}
+					</div>
 				</div>
 			</m.div>
 		</div>
