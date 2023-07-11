@@ -25,12 +25,21 @@ const faqs = [
 	},
 ];
 
-const AccordianContent = ({ section, isActive }) => {
+const AccordianContent = ({
+	section,
+	sectionIndex,
+	setActiveIndex,
+	isActive,
+}) => {
+	const toggleSection = () => {
+		const newIndex = isActive ? null : sectionIndex;
+		setActiveIndex(newIndex);
+	};
 	return (
 		<div className="">
 			<div className="px-4 py-6 flex items-center justify-between cursor-pointer bg-dark text-white font-extrabold text-xl">
 				<div className="">{section.title}</div>
-				<div>{isActive ? "-" : "+"}</div>
+				<div onClick={toggleSection}>{isActive ? "-" : "+"}</div>
 			</div>
 			{isActive && <div className="px-4 py-6 bg-white">{section.content}</div>}
 		</div>
@@ -45,7 +54,9 @@ export const Accordian = () => {
 					<AccordianContent
 						key={i}
 						section={item}
+						sectionIndex={i}
 						isActive={i === activeIndex}
+						setActiveIndex={setActiveIndex}
 					/>
 				);
 			})}
