@@ -24,6 +24,7 @@ import cloud5 from "@/img/cloud-5.png";
 // Libraries
 import "aos/dist/aos.css";
 import Aos from "aos";
+import { Accordian } from "@/components/Accordian";
 
 export default function Home() {
 	const [loading, setLoading] = useState(true);
@@ -215,7 +216,7 @@ const ContentWrapper = () => {
 					src={cloud3}
 					alt=""
 					data-aos="fade"
-					className="absolute -top-20 left-[35%] lg:left-[80%]"
+					className="absolute -top-[25%] left-[35%] lg:left-[60%]"
 				/>
 				<Title anim="fade" className={"text-center text-white"}>
 					PARTNERS
@@ -234,6 +235,7 @@ const ContentWrapper = () => {
 				<Title anim="fade" className={"text-center text-white"}>
 					FAQS
 				</Title>
+				<Accordian />
 			</SectionContainer>
 		</div>
 	);
