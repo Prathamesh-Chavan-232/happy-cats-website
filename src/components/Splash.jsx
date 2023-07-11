@@ -1,8 +1,14 @@
-import React from "react";
+// ReactJS
 import Image from "next/image";
-import logo from "@/img/logo-2.png";
+
+// Local imports
+import { SectionContainer } from "./skeleton/SectionContainer";
+
+// Libraries
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
-import { SectionContainer } from "./SectionContainer";
+
+// Assets
+import logo from "@/img/logo-2.png";
 
 export const Splash = () => {
 	return (

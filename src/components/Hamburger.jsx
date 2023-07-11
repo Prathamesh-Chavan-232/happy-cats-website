@@ -1,7 +1,11 @@
+// ReactJS
 import React, { useState } from "react";
+
+// Libraries
 import { motion as m } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+
 const MenuToggle = ({ toggle, isOpen }) => {
 	return (
 		<div>
@@ -34,13 +38,13 @@ export const Hamburger = () => {
 		setIsOpen(!isOpen);
 	};
 	const navList = [
-		"HOME",
-		"ABOUT",
-		"ROADMAP",
-		"TOKENOMICS",
-		"FAQS",
-		"PARNTERS",
-		"WHITEPAPER",
+		{ href: "#home", title: "HOME" },
+		{ href: "#about", title: "ABOUT" },
+		{ href: "#roadmap", title: "ROADMAP" },
+		{ href: "#tokenomics", title: "TOKENOMICS" },
+		{ href: "#faqs", title: "FAQS" },
+		{ href: "#partners", title: "PARNTERS" },
+		{ href: "/video", title: "WHITEPAPER" },
 	];
 
 	return (
@@ -63,8 +67,8 @@ export const Hamburger = () => {
 					<div className="py-16 px-8 flex flex-col gap-12 text-xl font-extrabold text-white">
 						{navList.map((item, i) => {
 							return (
-								<a key={i} href="#home" onClick={toggleMenu}>
-									{item}
+								<a key={i} href={item.href} onClick={toggleMenu}>
+									{item.title}
 								</a>
 							);
 						})}

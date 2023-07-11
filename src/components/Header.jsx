@@ -1,8 +1,11 @@
+// ReactJS
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/img/logo.png";
+
+// Local imports
 import { Hamburger } from "./Hamburger";
 
+// Libraries
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faTwitter,
@@ -12,6 +15,9 @@ import {
 	faTelegram,
 	faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+
+// Assets
+import logo from "@/img/logo.png";
 
 const NavItem = ({ link, children }) => {
 	return (
@@ -56,8 +62,8 @@ export const Header = () => {
 					<Link href="#about">ABOUT</Link>
 					<Link href="#tokenomics">TOKENOMICS</Link>
 					<Link href="#roadmap">ROADMAP</Link>
-					<Link href="#socials">FAQS</Link>
-					<Link href="#xoxo">PARTNERS</Link>
+					<Link href="#faqs">FAQS</Link>
+					<Link href="#partners">PARTNERS</Link>
 					<Link href="/video">VIDEO</Link>
 				</nav>
 			</div>

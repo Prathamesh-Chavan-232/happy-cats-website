@@ -1,79 +1,48 @@
 "use client";
-import Title from "@/components/Title";
-import { Paragraph } from "@/components/Paragraph";
-import { SectionContainer } from "@/components/SectionContainer";
-import { Roadmap } from "@/components/Roadmap";
 
+// local imports
+import Title from "@/components/skeleton/Title";
+import { Header } from "@/components/Header";
+import { Splash } from "@/components/Splash";
+import { Roadmap } from "@/components/Roadmap";
+import { Piechart } from "@/components/Piechart";
+import { Paragraph } from "@/components/skeleton/Paragraph";
+import { SectionContainer } from "@/components/skeleton/SectionContainer";
+
+// Nextjs
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
+// Assets
 import cloud1 from "@/img/cloud-1.png";
 import cloud2 from "@/img/cloud-2.png";
 import cloud3 from "@/img/cloud-3.png";
 import cloud4 from "@/img/cloud-4.png";
 import cloud5 from "@/img/cloud-5.png";
-import piechart from "@/img/piechart.jpg";
+// import piechart from "@/img/piechart.jpg";
 
+// Libraries
 import "aos/dist/aos.css";
 import Aos from "aos";
-import { Header } from "@/components/Header";
-import { Splash } from "@/components/Splash";
-import twitter from "@/img/Twitter.png";
-import telegram from "@/img/Telegram.png";
-import instagram from "@/img/Instagram.png";
-import medium from "@/img/Medium.png";
-import discord from "@/img/discord.png";
-import youtube from "@/img/YouTube.png";
 
-import { Chart } from "react-google-charts";
+export default function Home() {
+	const [loading, setLoading] = useState(true);
+	const [first, setFirst] = useState(true);
+	useEffect(() => {
+		if (first) {
+			setLoading(true);
 
-const data = [
-	["", ""],
-	["Team Tokens", 5],
-	["Pre-sale", 30],
-	["Initial Liquidity", 24],
-	["Farming rewards", 8],
-	["Marketing & CEX Listing", 8],
-	["Future Development", 10],
-	["Charity", 10],
-	["Community Rewards", 5],
-];
-const options = {
-	pieHole: 0.5,
-};
+			setTimeout(() => {
+				setLoading(false);
+			}, 2000);
+		}
 
-const socials = [
-	{
-		title: "Telegram",
-		link: "https://www.telegram.org",
-		img: telegram,
-	},
-	{
-		title: "Medium",
-		link: "https://www.medium.com",
-		img: medium,
-	},
-	{
-		title: "Twitter",
-		link: "https://www.twitter.com",
-		img: twitter,
-	},
-	{
-		title: "Discord",
-		link: "https://www.discord.org",
-		img: discord,
-	},
-	{
-		title: "Youtube",
-		link: "https://www.youtube.com",
-		img: youtube,
-	},
-	{
-		title: "Instagram",
-		link: "https://www.instagram.com",
-		img: instagram,
-	},
-];
+		setFirst(false);
+		Aos.init({ duration: 600 });
+	}, [first]);
+
+	return <main>{loading ? <Splash /> : <ContentWrapper />}</main>;
+}
 
 const ContentWrapper = () => {
 	return (
@@ -185,14 +154,7 @@ const ContentWrapper = () => {
 					<Title anim="zoom-in" className="text-tokenomics">
 						TOKENOMICS
 					</Title>
-					<Chart
-						chartType="PieChart"
-						options={options}
-						data={data}
-						width={"100%"}
-						height={"300px"}
-						className="px-4 lg:px-[20%]"
-					/>
+					<Piechart />
 					<Paragraph className="text-tokenomics">
 						<p>
 							Total Token Supply – 88,000,000,000 (88 Billion). The number 8 is
@@ -245,46 +207,30 @@ const ContentWrapper = () => {
 
 			<Roadmap />
 
-			{/* <SectionContainer id="footer" className="relative py-40 bg-footer">
+			<SectionContainer
+				id="partners"
+				className="py-24 relative bg-xoxo text-center"
+			>
 				<Image
 					src={cloud3}
 					alt=""
 					data-aos="fade"
 					className="absolute -top-20 left-[35%] lg:left-[80%]"
 				/>
-				<div className="px-4 lg:px-12 flex flex-col items-center justify-center gap-20">
-					<Title className="text-white font-extrabold">SOCIALS</Title>
-					<div className="font-semibold text-white text-lg lg:text-4xl px-4">
-						Our Telegram and Twitter are the best places to stay updated on the
-						latest HAPPY CATS news and connect with fellow community members
-					</div>
-					<div className="xl:mx-80 2xl:mx-96 grid grid-cols-2 gap-4 lg:gap-20 justify-center">
-						{socials.map((item, i) => {
-							return (
-								<button
-									key={i}
-									className="px-12 py-2 border border-black bg-white text-md lg:text-2xl text-black text-center font-bold rounded-full baseline shadow-xl"
-								>
-									<div className="flex items-center justify-center gap-4">
-										<Image src={item.img} alt="" />
-										<a href={item.link} className="text-center">
-											{item.title}
-										</a>
-									</div>
-								</button>
-							);
-						})}
-					</div>
-				</div>
-			</SectionContainer> */}
-
-			<SectionContainer id="xoxo" className="h-screen bg-xoxo">
 				<Title anim="fade" className={"text-center text-white"}>
 					PARTNERS
 				</Title>
+
+				<div className="mx-auto px-4 py-20 grid grid-cols-2 md:grid-cols-5 gap-8">
+					{Array(10)
+						.fill(true)
+						.map((item, i) => (
+							<div className="h-24 w-24 bg-red-300" key={i}></div>
+						))}
+				</div>
 			</SectionContainer>
 
-			<SectionContainer id="xoxo" className="h-screen bg-footer">
+			<SectionContainer id="faqs" className="h-screen bg-footer">
 				<Title anim="fade" className={"text-center text-white"}>
 					FAQS
 				</Title>
@@ -292,22 +238,3 @@ const ContentWrapper = () => {
 		</div>
 	);
 };
-
-export default function Home() {
-	const [loading, setLoading] = useState(true);
-	const [first, setFirst] = useState(true);
-	useEffect(() => {
-		if (first) {
-			setLoading(true);
-
-			setTimeout(() => {
-				setLoading(false);
-			}, 2000);
-		}
-
-		setFirst(false);
-		Aos.init({ duration: 600 });
-	}, [first]);
-
-	return <main>{loading ? <Splash /> : <ContentWrapper />}</main>;
-}

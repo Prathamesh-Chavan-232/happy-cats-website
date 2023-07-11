@@ -11,11 +11,10 @@
 /* The actual timeline (the vertical ruler) */
 /* timeline-elem around content */
 
-
 .timeline-elem {
 	position: relative;
 	background-color: inherit;
-  /* padding: 6px 0; */
+	/* padding: 6px 0; */
 	width: 50%;
 }
 
@@ -37,24 +36,14 @@
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 1278px) {
-
+@media screen and (max-width: 1024px) {
 	/* Full-width timeline-elems */
 	.timeline-elem {
 		width: 100%;
-		padding-left: 20px;
 	}
 
 	/* Make all right timeline-elems behave like the left ones */
 	.right {
 		left: 0%;
-	}
-}
-
-@media screen and (max-width: 1024px) {
-
-	/* Full-width timeline-elems */
-	.timeline-elem {
-		padding-left: 0;
 	}
 }

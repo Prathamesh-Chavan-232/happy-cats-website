@@ -1,8 +1,14 @@
 "use client";
+// Nextjs
 import { useRouter } from "next/navigation";
-import video from "@/img/happycats.mp4";
+
+// Libraries
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
+// Assets
+import video from "@/img/happycats.mp4";
+
 export default function Video() {
 	const router = useRouter();
 	return (

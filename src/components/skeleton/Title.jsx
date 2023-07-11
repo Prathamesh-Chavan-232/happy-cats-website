@@ -3,7 +3,7 @@ const Title = ({ anim, children, className, ...props }) => {
 		<p
 			data-aos={anim}
 			className={
-				"text-4xl md:text-7xl font-extrabold relative z-20 " + (className || "")
+				"text-5xl md:text-7xl font-extrabold relative z-20 " + (className || "")
 			}
 		>
 			{children}
