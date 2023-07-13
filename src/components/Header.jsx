@@ -64,7 +64,7 @@ export const Header = () => {
 					<Link href="#roadmap">ROADMAP</Link>
 					<Link href="#faqs">FAQS</Link>
 					<Link href="#partners">PARTNERS</Link>
-					<Link href="/video">VIDEO</Link>
+					<Link href="/video">WHITEPAPER</Link>
 				</nav>
 			</div>
 			<div className="flex lg:hidden py-6 items-center justify-center bg-white text-black">
