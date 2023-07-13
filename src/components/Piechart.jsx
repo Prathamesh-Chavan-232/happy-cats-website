@@ -1,5 +1,5 @@
 // Libraries
-import { Chart } from "react-google-charts";
+import Chart from "react-apexcharts";
 
 const data = [
 	["", ""],
@@ -12,20 +12,31 @@ const data = [
 	["Charity", 10],
 	["Community Rewards", 5],
 ];
+
 const options = {
 	pieHole: 0.5,
 };
 
 export const Piechart = () => {
 	return (
-		<div>
+		<div className="px-4 text-left text-2xl font-semibold">
 			<Chart
-				chartType="PieChart"
-				options={options}
-				data={data}
-				width={"100%"}
-				height={"300px"}
-				className="px-4 lg:px-[20%]"
+				type="donut"
+				// width={800}
+				height={800}
+				series={[5, 5, 30, 24, 8, 10, 8, 10]}
+				options={{
+					labels: [
+						"Community Rewards",
+						"Team Tokens",
+						"Pre-sale",
+						"Initial Liquidity",
+						"Farming rewards",
+						"Clarity",
+						"Marketing & CEX Listing",
+						"Future Development",
+					],
+				}}
 			/>
 		</div>
 	);
