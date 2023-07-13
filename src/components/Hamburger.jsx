@@ -40,10 +40,10 @@ export const Hamburger = () => {
 	const navList = [
 		{ href: "#home", title: "HOME" },
 		{ href: "#about", title: "ABOUT" },
-		{ href: "#roadmap", title: "ROADMAP" },
 		{ href: "#tokenomics", title: "TOKENOMICS" },
-		{ href: "#faqs", title: "FAQS" },
+		{ href: "#roadmap", title: "ROADMAP" },
 		{ href: "#partners", title: "PARNTERS" },
+		{ href: "#faqs", title: "FAQS" },
 		{ href: "/video", title: "WHITEPAPER" },
 	];
 

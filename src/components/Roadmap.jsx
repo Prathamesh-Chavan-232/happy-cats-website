@@ -8,45 +8,71 @@ import Title from "./skeleton/Title";
 //Assets
 import bamboo from "@/img/bamboo.png";
 import bamboo2 from "@/img/bamboo-2.png";
-import cloud4 from "@/img/cloud-4.png";
 
 export const Roadmap = () => {
 	const roadmap = [
 		{
 			align: "left",
 			title: "Phase 0",
-			content:
-				"Market Research and Ideation\nConcept, Design & Whitepaper Preparation\nWebsite, Social Media handles Launch",
+			content: [
+				"Market Research and Ideation",
+				"Concept, Design & Whitepaper Preparation",
+				"Website, Social Media handles Launch",
+			],
 		},
 		{
 			align: "right",
 			title: "Phase 1",
-			content:
-				"Smart Contract Development & Auditing\nPre-Launch Marketing & Influencers Onboarding\nWL Contest and Public Pre-Sale Launch\nGo-Live on Pancakeswap DEX",
+			content: [
+				"Smart Contract Development & Auditing",
+				"Pre-Launch Marketing & Influencers Onboarding",
+				"WL Contest and Public Pre-Sale Launch",
+				"Go-Live on Pancakeswap DEX",
+			],
 		},
 		{
 			align: "left",
 			title: "Phase 2",
-			content:
-				"CMC & CG Listing.\nHuge Marketing Push, including Asian & Chinese Markets.\nKick Off Community Contests\nStart BuyBack & Burn\nStart Mission Charity – Donations to Cat Shelter\nInitial AI Tool launch",
+			content: [
+				"CMC & CG Listing.",
+				"Huge Marketing Push, including Asian & Chinese Markets.",
+				"Kick Off Community Contests",
+				"Start BuyBack & Burn",
+				"Start Mission Charity – Donations to Cat Shelter",
+				"Initial AI Tool launch",
+			],
 		},
 		{
 			align: "right",
 			title: "Phase 3",
-			content:
-				"10000+ Holders\nMore Marketing push\nFirst-ever Memecert (Meme Concert on Metaverse platform)\nStaking & Farming Platform Launch\nCross Chain Liquidity (ETH/ARB/SOL)\nBuyback & Burn – continues…",
+			content: [
+				"10000+ Holders",
+				"More Marketing push",
+				"First-ever Memecert (Meme Concert on Metaverse platform)",
+				"Staking & Farming Platform Launch",
+				"Cross Chain Liquidity (ETH/ARB/SOL)",
+				"Buyback & Burn – continues…",
+			],
 		},
 		{
 			align: "left",
 			title: "Phase 4",
-			content:
-				"Tier 1 CEX Listing\nMission Charity – continues…\nMore Marketing Push\nBuyback & Burn – continues…",
+			content: [
+				"Tier 1 CEX Listing",
+				"Mission Charity – continues…",
+				"More Marketing Pus",
+				"Buyback & Burn – continues…",
+			],
 		},
 		{
 			align: "right",
 			title: "Phase 5",
-			content:
-				"Mission Charity – continues…\nHappy Cat Merchandise Store\nNFT Store, Metaverse Platform\nAdvanced AI Tools Launch",
+			content: [
+				"Mission Charity – continues…",
+				"Happy Cat Merchandise Store",
+				"NFT Store, Metaverse Platform",
+				"Advanced AI Tools Launch",
+			],
 		},
 	];
 	return (
@@ -73,7 +99,15 @@ export const Roadmap = () => {
 								<div key={i} className={"timeline-elem " + item.align}>
 									<Paragraph className="whitespace-pre-line">
 										<div className="text-4xl">{item.title}</div>
-										<p className="text-xl">{item.content}</p>
+										<p className="text-xl">
+											{item.content.map((content, i) => {
+												return (
+													<li className="px-2" key={i}>
+														{content}
+													</li>
+												);
+											})}
+										</p>
 									</Paragraph>
 								</div>
 							);

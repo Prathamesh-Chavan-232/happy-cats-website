@@ -17,6 +17,10 @@ export const Piechart = () => {
 		const chart = new Chart(ctx, {
 			type: "doughnut",
 			width: "100%",
+			style: {
+				color: "#000",
+				fontSize: "18px",
+			},
 			data: {
 				labels: [
 					"Community rewards",
@@ -42,8 +46,6 @@ export const Piechart = () => {
 							"rgba(153, 102, 255, 0.5)",
 							"rgba(255, 159, 64, 0.5)",
 						],
-						color: "#000",
-						fontSize: "18px",
 						borderColor: ["rgba(41,32,86,1)"],
 						borderWidth: 1.5,
 					},
