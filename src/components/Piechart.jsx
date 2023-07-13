@@ -20,24 +20,26 @@ const options = {
 export const Piechart = () => {
 	return (
 		<div className="px-4 text-left text-2xl font-semibold">
-			<Chart
-				type="donut"
-				// width={800}
-				height={800}
-				series={[5, 5, 30, 24, 8, 10, 8, 10]}
-				options={{
-					labels: [
-						"Community Rewards",
-						"Team Tokens",
-						"Pre-sale",
-						"Initial Liquidity",
-						"Farming rewards",
-						"Clarity",
-						"Marketing & CEX Listing",
-						"Future Development",
-					],
-				}}
-			/>
+			{typeof window !== "undefined" && (
+				<Chart
+					type="donut"
+					// width={800}
+					height={800}
+					series={[5, 5, 30, 24, 8, 10, 8, 10]}
+					options={{
+						labels: [
+							"Community Rewards",
+							"Team Tokens",
+							"Pre-sale",
+							"Initial Liquidity",
+							"Farming rewards",
+							"Clarity",
+							"Marketing & CEX Listing",
+							"Future Development",
+						],
+					}}
+				/>
+			)}
 		</div>
 	);
 };
