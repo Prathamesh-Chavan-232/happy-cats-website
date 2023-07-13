@@ -43,7 +43,12 @@ const AccordianContent = ({
 		<div className="">
 			<div className="px-4 py-6 flex items-center justify-between cursor-pointer bg-dark text-white font-extrabold text-xl">
 				<div className="">{section.title}</div>
-				<div onClick={toggleSection}>{isActive ? "-" : "+"}</div>
+				<div
+					onClick={toggleSection}
+					className="ease-in-out transition-all duration-300"
+				>
+					{isActive ? "-" : "+"}
+				</div>
 			</div>
 			{isActive && <div className="px-4 py-6 bg-white">{section.content}</div>}
 		</div>
@@ -52,7 +57,7 @@ const AccordianContent = ({
 export const Accordian = () => {
 	const [activeIndex, setActiveIndex] = useState(0);
 	return (
-		<div className="px-8 py-12 mx-auto space-y-8 max-w-[600px] ">
+		<div className="relative px-8 py-[10%] mx-auto space-y-8 min-w-[300px] max-w-[800px]">
 			{faqs.map((item, i) => {
 				return (
 					<AccordianContent

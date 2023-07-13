@@ -47,10 +47,10 @@ export default function Home() {
 
 const ContentWrapper = () => {
 	return (
-		<div className="overflow-hidden">
+		<div>
 			{/* Hero */}
 			<Header />
-			<SectionContainer className="pb-[20%] bg-hero h-full w-screen pt-64">
+			<SectionContainer className="relative pb-[20%] bg-hero h-full w-screen pt-64">
 				<div className="flex flex-col items-center justify-center gap-32">
 					<h1
 						data-aos="zoom-in"
@@ -233,7 +233,7 @@ const ContentWrapper = () => {
 				</div>
 			</SectionContainer>
 
-			<SectionContainer id="faqs" className="py-[10%] bg-footer">
+			<SectionContainer id="faqs" className="relative py-[10%] bg-footer">
 				<Title anim="fade" className={"text-center text-white"}>
 					FAQS
 				</Title>
