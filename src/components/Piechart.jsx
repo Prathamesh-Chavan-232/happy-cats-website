@@ -3,17 +3,6 @@
 import Chart from "chart.js/auto";
 import { useRef, useEffect } from "react";
 
-const data = [
-	["Team Tokens", 5],
-	["Pre-sale", 30],
-	["Initial Liquidity", 24],
-	["Farming rewards", 8],
-	["Marketing & CEX Listing", 8],
-	["Future Development", 10],
-	["Charity", 10],
-	["Community Rewards", 5],
-];
-
 export const Piechart = () => {
 	const canvas = useRef();
 
@@ -26,30 +15,37 @@ export const Piechart = () => {
 		}
 
 		const chart = new Chart(ctx, {
-			type: "pie",
+			type: "doughnut",
+			width: "100%",
 			data: {
-				labels: ["Lions", "Monkeys", "Zebras", "Eagles", "Horses"],
+				labels: [
+					"Community rewards",
+					"Team tokens",
+					"Pre-sale",
+					"Initial liquidity",
+					"Forming rewards",
+					"Charity",
+					"Marketing & CEX listing",
+					"Future development",
+				],
 				datasets: [
 					{
-						label: "Dataset 1",
-						data: [12, 19, 3, 2, 3],
+						label: "Data",
+						data: [5, 5, 30, 24, 8, 10, 8, 10],
 						backgroundColor: [
-							"rgba(255, 99, 132, 0.2)",
-							"rgba(54, 162, 235, 0.2)",
-							"rgba(255, 206, 86, 0.2)",
-							"rgba(75, 192, 192, 0.2)",
-							"rgba(153, 102, 255, 0.2)",
-							"rgba(255, 159, 64, 0.2)",
+							"rgba(255, 99, 132, 0.5)",
+							"rgba(159,150,234,0.5)",
+							"rgba(119,182,0,0.5)",
+							"rgba(86,190,251, 0.5)",
+							"rgba(255, 206, 86, 0.5)",
+							"rgba(75, 192, 192, 0.5)",
+							"rgba(153, 102, 255, 0.5)",
+							"rgba(255, 159, 64, 0.5)",
 						],
-						borderColor: [
-							"rgba(255, 99, 132, 1)",
-							"rgba(54, 162, 235, 1)",
-							"rgba(255, 206, 86, 1)",
-							"rgba(75, 192, 192, 1)",
-							"rgba(153, 102, 255, 1)",
-							"rgba(255, 159, 64, 1)",
-						],
-						borderWidth: 1,
+						color: "#000",
+						fontSize: "18px",
+						borderColor: ["rgba(41,32,86,1)"],
+						borderWidth: 1.5,
 					},
 				],
 			},
@@ -57,18 +53,15 @@ export const Piechart = () => {
 				responsive: true,
 				plugins: {
 					legend: {
-						position: "top",
-					},
-					title: {
-						display: true,
-						text: "Number of animals in the zoo",
+						position: "bottom",
+						fontSize: "18px",
 					},
 				},
 			},
 		});
 	}, []);
 	return (
-		<div className="relative mx-auto h-[50vh] w-[50vw] flex items-start justify-center">
+		<div className="my-[10%] mx-auto h-[50vh] w-full flex items-center justify-center">
 			<canvas ref={canvas}></canvas>
 		</div>
 	);

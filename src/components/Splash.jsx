@@ -13,13 +13,13 @@ import logo from "@/img/logo-2.png";
 export const Splash = () => {
 	return (
 		<SectionContainer className="h-screen w-screen bg-splash bg-cover bg-no-repeat overflow-hidden">
-			<div className="flex flex-col items-center justify-center text-center gap-24">
+			<div className="flex flex-col items-center justify-center text-center gap-20">
 				<Image
 					src={logo}
 					alt="Logo"
 					className="lg:absolute lg:left-10 h-96 w-96"
 				/>
-				<div className="pt-40">
+				<div className="pt-[10%]">
 					<ClimbingBoxLoader
 						speedMultiplier="0.8"
 						color="#fff"

@@ -54,15 +54,20 @@ export const Roadmap = () => {
 			id="roadmap"
 			className="relative bg-roadmap bg-cover bg-no-repeat py-40 w-full flex flex-col gap-12"
 		>
-			<div className="flex flex-col gap-12">
+			<div className="px-2 flex flex-col gap-12">
 				<Title className="text-center">ROADMAP</Title>
 				<div className="py-12 lg:py-0">
 					<Image
 						src={bamboo2}
 						alt="bamboo"
-						className="absolute top-60 left-0 lg:top-[10%] lg:left-[44%]"
+						className="hidden lg:block absolute lg:top-[10%] lg:left-[44%]"
 					></Image>
-					<div className="pl-40 space-y-4">
+					<Image
+						src={bamboo}
+						alt="bamboo"
+						className="lg:hidden absolute top-60 -left-[15%] md:-left-[10%]"
+					></Image>
+					<div className="pl-16 space-y-4">
 						{roadmap.map((item, i) => {
 							return (
 								<div key={i} className={"timeline-elem " + item.align}>

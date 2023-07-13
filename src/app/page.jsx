@@ -47,11 +47,10 @@ export default function Home() {
 
 const ContentWrapper = () => {
 	return (
-		<div className="overflow-x-hidden">
+		<div className="overflow-hidden">
 			{/* Hero */}
 			<Header />
-			{/* Hero */}
-			<SectionContainer className="pb-40 bg-hero h-full w-screen pt-64">
+			<SectionContainer className="pb-[20%] bg-hero h-full w-screen pt-64">
 				<div className="flex flex-col items-center justify-center gap-32">
 					<h1
 						data-aos="zoom-in"
@@ -77,7 +76,10 @@ const ContentWrapper = () => {
 			</SectionContainer>
 
 			{/* About */}
-			<SectionContainer id="about" className="py-10 lg:py-64 relative bg-about">
+			<SectionContainer
+				id="about"
+				className="py-[10%] lg:py-64 relative bg-about"
+			>
 				<Image
 					src={cloud1}
 					alt=""
@@ -136,7 +138,7 @@ const ContentWrapper = () => {
 
 			<SectionContainer
 				id="tokenomics"
-				className="relative py-10 lg:py-64 bg-tokenomics"
+				className="relative py-[10%] bg-tokenomics"
 			>
 				<Image
 					src={cloud5}
@@ -210,7 +212,7 @@ const ContentWrapper = () => {
 
 			<SectionContainer
 				id="partners"
-				className="py-24 relative bg-xoxo text-center"
+				className="py-[10%] relative bg-xoxo text-center"
 			>
 				<Image
 					src={cloud3}
@@ -231,7 +233,7 @@ const ContentWrapper = () => {
 				</div>
 			</SectionContainer>
 
-			<SectionContainer id="faqs" className="h-screen bg-footer">
+			<SectionContainer id="faqs" className="py-[10%] bg-footer">
 				<Title anim="fade" className={"text-center text-white"}>
 					FAQS
 				</Title>
