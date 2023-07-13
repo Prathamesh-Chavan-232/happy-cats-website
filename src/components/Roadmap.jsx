@@ -16,37 +16,37 @@ export const Roadmap = () => {
 			align: "left",
 			title: "Phase 0",
 			content:
-				"Market Research and Ideation\n\n Concept, Design & Whitepaper Preparation\n\nWebsite, Social Media handles Launch",
+				"Market Research and Ideation\nConcept, Design & Whitepaper Preparation\nWebsite, Social Media handles Launch",
 		},
 		{
 			align: "right",
 			title: "Phase 1",
 			content:
-				"Smart Contract Development & Auditing\n\nPre-Launch Marketing & Influencers Onboarding\n\nWL Contest and Public Pre-Sale Launch\n\nGo-Live on Pancakeswap DEX",
+				"Smart Contract Development & Auditing\nPre-Launch Marketing & Influencers Onboarding\nWL Contest and Public Pre-Sale Launch\nGo-Live on Pancakeswap DEX",
 		},
 		{
 			align: "left",
 			title: "Phase 2",
 			content:
-				"CMC & CG Listing\n\nHuge Marketing Push, including Asian & Chinese Markets\n\nKick Off Community Contests\n\nStart BuyBack & Burn\n\nStart Mission Charity – Donations to Cat Shelter\n\nInitial AI Tool launch",
+				"CMC & CG Listing.\nHuge Marketing Push, including Asian & Chinese Markets.\nKick Off Community Contests\nStart BuyBack & Burn\nStart Mission Charity – Donations to Cat Shelter\nInitial AI Tool launch",
 		},
 		{
 			align: "right",
 			title: "Phase 3",
 			content:
-				"10000+ Holders\n\nMore Marketing push\n\nFirst-ever Memecert (Meme Concert on Metaverse platform)\n\nStaking & Farming Platform Launch\n\nCross Chain Liquidity (ETH/ARB/SOL)\n\nBuyback & Burn – continues…",
+				"10000+ Holders\nMore Marketing push\nFirst-ever Memecert (Meme Concert on Metaverse platform)\nStaking & Farming Platform Launch\nCross Chain Liquidity (ETH/ARB/SOL)\nBuyback & Burn – continues…",
 		},
 		{
 			align: "left",
 			title: "Phase 4",
 			content:
-				"Tier 1 CEX Listing\n\nMission Charity – continues…\n\nMore Marketing Push\n\nBuyback & Burn – continues…",
+				"Tier 1 CEX Listing\nMission Charity – continues…\nMore Marketing Push\nBuyback & Burn – continues…",
 		},
 		{
 			align: "right",
 			title: "Phase 5",
 			content:
-				"Mission Charity – continues…\n\nHappy Cat Merchandise Store\n\nNFT Store, Metaverse Platform\n\nAdvanced AI Tools Launch",
+				"Mission Charity – continues…\nHappy Cat Merchandise Store\nNFT Store, Metaverse Platform\nAdvanced AI Tools Launch",
 		},
 	];
 	return (
@@ -58,16 +58,11 @@ export const Roadmap = () => {
 				<Title className="text-center">ROADMAP</Title>
 				<div className="py-12 lg:py-0">
 					<Image
-						src={bamboo}
-						alt="bamboo"
-						className="hidden lg:block absolute top-[10%] left-[44%]"
-					></Image>
-					<Image
 						src={bamboo2}
 						alt="bamboo"
-						className="lg:hidden absolute top-60 left-0"
+						className="absolute top-60 left-0 lg:top-[10%] lg:left-[44%]"
 					></Image>
-					<div className="pl-12 space-y-4">
+					<div className="pl-40 space-y-4">
 						{roadmap.map((item, i) => {
 							return (
 								<div key={i} className={"timeline-elem " + item.align}>

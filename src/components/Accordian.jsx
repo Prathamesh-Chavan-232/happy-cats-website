@@ -23,6 +23,10 @@ const faqs = [
 		content:
 			"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod ad fugit et sunt culpa voluptatem laudantium, itaque asperiores excepturi expedita natus reiciendis eos corporis atque laboriosam temporibus. Voluptatem nemo quisquam dignissimos dolore soluta, dolorem voluptatibus nihil. Magnam praesentium pariatur quaerat.",
 	},
+	{
+		title: "FAQ 4",
+		content: "Lorem ipsum dolor sit amet consectetur,",
+	},
 ];
 
 const AccordianContent = ({
