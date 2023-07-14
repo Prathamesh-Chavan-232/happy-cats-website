@@ -25,6 +25,8 @@ import cloud5 from "@/img/cloud-5.png";
 import "aos/dist/aos.css";
 import Aos from "aos";
 import { Accordian } from "@/components/Accordian";
+import { FloatingButton } from "@/components/FloatingButton";
+import { MobileHeader } from "@/components/MobileHeader";
 
 export default function Home() {
 	const [loading, setLoading] = useState(true);
@@ -47,9 +49,10 @@ export default function Home() {
 
 const ContentWrapper = () => {
 	return (
-		<div>
+		<div className="w-screen">
 			{/* Hero */}
 			<Header />
+			<MobileHeader />
 			<SectionContainer className="relative pb-[20%] bg-hero h-full w-screen pt-64">
 				<div className="flex flex-col items-center justify-center gap-32">
 					<h1
@@ -239,6 +242,7 @@ const ContentWrapper = () => {
 				</Title>
 				<Accordian />
 			</SectionContainer>
+			<FloatingButton />
 		</div>
 	);
 };

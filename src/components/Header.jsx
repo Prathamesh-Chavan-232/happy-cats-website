@@ -31,7 +31,7 @@ const NavItem = ({ link, children }) => {
 
 export const Header = () => {
 	return (
-		<header className="z-[999] sticky top-0">
+		<header className="z-[999] sticky top-0 w-screen">
 			<div className="mx-auto px-12 lg:px-40 py-2 text-xs flex items-center justify-between bg-dark text-white">
 				<Image src={logo} alt="LOGO" className="h-20 w-20"></Image>
 				<div className="hidden lg:flex gap-4">
@@ -65,28 +65,6 @@ export const Header = () => {
 					<Link href="#faqs">FAQS</Link>
 					<Link href="#partners">PARTNERS</Link>
 					<Link href="/video">WHITEPAPER</Link>
-				</nav>
-			</div>
-			<div className="flex lg:hidden py-6 items-center justify-center bg-white text-black">
-				<nav className="font-extrabold space-x-8">
-					<a href="https://instagram.com" target="_blank">
-						<FontAwesomeIcon icon={faInstagram} size="xl" />
-					</a>
-					<a href="https://twitter.com" target="_blank">
-						<FontAwesomeIcon icon={faTwitter} size="xl" />
-					</a>
-					<a href="https://telegram.org" target="_blank">
-						<FontAwesomeIcon icon={faTelegram} size="xl" />
-					</a>
-					<a href="https://discord.com" target="_blank">
-						<FontAwesomeIcon icon={faDiscord} size="xl" />
-					</a>
-					<a href="https://youtube.com" target="_blank">
-						<FontAwesomeIcon icon={faYoutube} size="xl" />
-					</a>
-					<a href="https://medium.com" target="_blank">
-						<FontAwesomeIcon icon={faMedium} size="xl" />
-					</a>
 				</nav>
 			</div>
 		</header>

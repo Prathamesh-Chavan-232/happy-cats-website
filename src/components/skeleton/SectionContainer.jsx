@@ -5,7 +5,7 @@ export const SectionContainer = ({ id, children, className, anim }) => {
 		<div
 			id={id}
 			className={
-				"bg-cover bg-no-repeat bg-center object-cover flex flex-col items-center justify-center text-left " +
+				"w-screen bg-cover bg-no-repeat bg-center object-cover flex flex-col items-center justify-center text-left " +
 				(className || " ")
 			}
 		>
